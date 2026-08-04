@@ -76,23 +76,19 @@
             position: relative; width: 100%; aspect-ratio: 16/10; overflow: hidden; background: #f1f5f9;
         }
         .snap-img {
-            width: 100%; height: 100%; object-fit: cover; object-position: top;
-            transition: transform .12s linear;
-            will-change: transform;
+            width: 100%; height: auto; min-height: 100%; object-fit: cover; object-position: top;
+            display: block;
         }
         @media (hover: none) {
             .site-card:hover { transform: none; box-shadow: none; }
-            .snap-img { transition: none; transform: none !important; }
         }
         @media (prefers-reduced-motion: reduce) {
-            .snap-img { transition: none; transform: none !important; }
             .site-card { transition: none; }
         }
 
         /* ── Mobile: taller snapshots ── */
         @media (max-width: 640px) {
             .snap-box { aspect-ratio: 3/4; }
-            .snap-img { height: 100%; object-fit: cover; }
         }
 
         /* ── Reveal animation (CSS only, no GSAP) ── */
@@ -314,12 +310,12 @@
             var cards = document.querySelectorAll(".site-card");
             cards.forEach(function (card) {
                 var img = card.querySelector(".snap-img");
-                if (!img) return;
                 var box = card.querySelector(".snap-box");
+                if (!img || !box) return;
                 var raf = null;
 
                 card.addEventListener("mouseenter", function () {
-                    img.style.transition = "transform .12s linear";
+                    img.style.transition = "transform .1s linear";
                 });
 
                 card.addEventListener("mousemove", function (e) {
@@ -328,7 +324,7 @@
                         var rect = box.getBoundingClientRect();
                         var y = (e.clientY - rect.top) / rect.height;
                         y = Math.max(0, Math.min(1, y));
-                        var maxShift = img.scrollHeight - box.clientHeight;
+                        var maxShift = img.offsetHeight - box.clientHeight;
                         if (maxShift > 0) {
                             img.style.transform = "translateY(-" + (y * maxShift) + "px)";
                         }
