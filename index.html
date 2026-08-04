@@ -2,79 +2,109 @@
 <html lang="ar" dir="rtl" id="main-html" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0d9488">
+    <meta name="color-scheme" content="light">
 
-    <!-- ============================================================
-    OPEN GRAPH META TAGS – FULLY SELF-CONTAINED (EMBEDDED SVG LOGO)
-    ============================================================ -->
-    <meta property="og:title" content="منظومة إدارة المحاماة والقضايا الذكية " />
-    <meta property="og:description" content="حزمة متكاملة من منظومة إدارة المحاماة والقضايا الذكية 
- المصممة لتمكين المحامين والمواطنين والشركات في منطقة الشرق الأوسط." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://legalwakeely.com/" />
-    <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%231a1a2c'/%3E%3Crect x='450' y='150' width='300' height='330' rx='30' fill='%23b8860b'/%3E%3Ctext x='600' y='380' font-family='Arial' font-weight='bold' font-size='140' fill='%231a1a2c' text-anchor='middle'%3EW%3C/text%3E%3Ctext x='600' y='460' font-family='Arial' font-size='36' fill='%23f8f6f0' text-anchor='middle'%3EWAKEELY GROUP%3C/text%3E%3C/svg%3E" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="منظومة إدارة المحاماة والقضايا الذكية " />
-    <meta property="og:locale" content="ar_AR" />
-    <meta property="og:locale:alternate" content="en_US" />
-    <meta property="og:site_name" content="Legal Wakeely Ecosystem" />
+    <!-- Preconnect to external origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="منظومة إدارة المحاماة والقضايا الذكية " />
-    <meta name="twitter:description" content="حزمة متكاملة من منظومة إدارة المحاماة والقضايا الذكية 
- المصممة لتمكين المحامين والمواطنين والشركات في منطقة الشرق الأوسط." />
+    <!-- Open Graph -->
+    <meta property="og:title" content="منظومة إدارة المحاماة والقضايا الذكية">
+    <meta property="og:description" content="حزمة متكاملة من منظومة إدارة المحاماة والقضايا الذكية المصممة لتمكين المحامين والمواطنين والشركات في منطقة الشرق الأوسط.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://legalwakeely.com/">
+    <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%231a1a2c'/%3E%3Crect x='450' y='150' width='300' height='330' rx='30' fill='%23b8860b'/%3E%3Ctext x='600' y='380' font-family='Arial' font-weight='bold' font-size='140' fill='%231a1a2c' text-anchor='middle'%3EW%3C/text%3E%3Ctext x='600' y='460' font-family='Arial' font-size='36' fill='%23f8f6f0' text-anchor='middle'%3EWAKEELY GROUP%3C/text%3E%3C/svg%3E">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="منظومة إدارة المحاماة والقضايا الذكية">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:site_name" content="Legal Wakeely Ecosystem">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="منظومة إدارة المحاماة والقضايا الذكية">
+    <meta name="twitter:description" content="حزمة متكاملة من منظومة إدارة المحاماة والقضايا الذكية المصممة لتمكين المحامين والمواطنين والشركات في منطقة الشرق الأوسط.">
 
     <title>Legal Wakeely Ecosystem | للذكاء الإصطناعى منظومة وكيلي</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts with display=swap already in URL -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Tailwind with defer so it doesn't block rendering -->
+    <script src="https://cdn.tailwindcss.com" defer></script>
+
+    <!-- Lucide pinned version with defer -->
+    <script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js" defer></script>
+
+    <!-- GSAP with defer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+
     <style>
         :root {
             --brand-teal: #0d9488;
             --font-ar: 'Tajawal', sans-serif;
             --font-en: 'Poppins', sans-serif;
         }
-        * {
+
+        *, *::before, *::after {
             -webkit-tap-highlight-color: transparent;
             box-sizing: border-box;
         }
-        html { scroll-behavior: smooth; }
+
         body {
             font-family: var(--font-ar);
             background-color: #ffffff;
             color: #0f172a;
             overflow-x: hidden;
+            margin: 0;
         }
+
         [dir="ltr"] body {
             font-family: var(--font-en);
         }
+
         [dir="ltr"] h1, [dir="ltr"] h2, [dir="ltr"] h3, [dir="ltr"] .font-bold-en {
             font-weight: 900 !important;
             letter-spacing: -0.02em;
         }
+
         .site-card {
             background: #ffffff;
             border-radius: 28px;
             overflow: hidden;
-            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                        box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
             border: 1px solid #f1f5f9;
             display: block;
+            will-change: transform;
         }
+
+        .site-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.1);
+        }
+
         .snapshot-container {
             position: relative;
-            aspect-ratio: 16/10;
+            aspect-ratio: 16 / 10;
             overflow: hidden;
             background: #f8fafc;
         }
+
         .snapshot-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: top;
         }
+
+        /* Language switcher */
         .lang-switch-container {
             position: fixed;
             bottom: 16px;
@@ -82,6 +112,7 @@
             transform: translateX(-50%);
             z-index: 1000;
         }
+
         @media (min-width: 768px) {
             .lang-switch-container {
                 top: 20px;
@@ -95,122 +126,175 @@
                 left: 20px;
             }
         }
+
         .lang-toggle-pill {
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.92);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(13, 148, 136, 0.2);
-            padding: 6px;
+            border: 1px solid rgba(13, 148, 136, 0.15);
+            padding: 5px;
             border-radius: 20px;
             display: flex;
-            gap: 4px;
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15);
+            gap: 3px;
+            box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.12);
         }
+
         .lang-btn {
-            padding: 8px 16px;
+            padding: 7px 14px;
             border-radius: 14px;
             font-weight: 800;
-            font-size: 14px;
-            transition: all 0.3s ease;
+            font-size: 13px;
+            transition: all 0.25s ease;
             cursor: pointer;
             border: none;
             background: transparent;
+            color: #64748b;
+            font-family: inherit;
         }
+
         .lang-btn.active {
             background: var(--brand-teal);
             color: white;
             box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
         }
-        .lang-btn:not(.active) {
-            color: #64748b;
-        }
+
         .lang-btn:not(.active):hover {
-            background: rgba(13, 148, 136, 0.05);
+            background: rgba(13, 148, 136, 0.06);
             color: var(--brand-teal);
         }
+
         .gradient-text {
             background: linear-gradient(135deg, #0d9488 0%, #0ea5e9 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        /* Content is visible by default (no-JS / slow-JS safe).
-           JS progressively ENHANCES with a reveal animation via .js-reveal,
-           it never hides content that JS fails to touch. */
-        .reveal { opacity: 1; transform: none; }
+        /* Reveal animation system */
+        .reveal {
+            opacity: 1;
+            transform: none;
+        }
+
         .js-ready .reveal.js-reveal {
             opacity: 0;
-            transform: translateY(24px);
+            transform: translateY(20px);
         }
 
+        .js-ready .site-card.js-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        /* Hover arrow direction – always outward from card */
+        [dir="rtl"] .card-arrow {
+            transition: transform 0.3s ease;
+        }
+        [dir="rtl"] .site-card:hover .card-arrow {
+            transform: translateX(8px);
+        }
+        [dir="ltr"] .card-arrow {
+            transition: transform 0.3s ease;
+        }
+        [dir="ltr"] .site-card:hover .card-arrow {
+            transform: translateX(-8px);
+        }
+
+        /* Mobile-specific overrides */
         @media (max-width: 640px) {
             .hero-title {
-                font-size: 2.5rem !important;
-                line-height: 1.15 !important;
+                font-size: 2rem !important;
+                line-height: 1.2 !important;
             }
             .site-card {
-                border-radius: 22px;
+                border-radius: 20px;
+            }
+            .snapshot-container {
+                aspect-ratio: 16 / 9;
             }
         }
+
+        @media (min-width: 641px) and (max-width: 768px) {
+            .hero-title {
+                font-size: 2.75rem !important;
+                line-height: 1.15 !important;
+            }
+        }
+
         @media (hover: none) {
-            .snapshot-img {
-                transform: none !important;
+            .site-card:hover {
+                transform: none;
+                box-shadow: none;
             }
         }
+
         @media (prefers-reduced-motion: reduce) {
-            .js-ready .reveal.js-reveal {
+            .js-ready .reveal.js-reveal,
+            .js-ready .site-card.js-reveal {
                 opacity: 1 !important;
                 transform: none !important;
             }
+            .site-card {
+                transition: none !important;
+            }
+        }
+
+        /* Loading fallback – content visible if JS fails */
+        .no-js .reveal.js-reveal {
+            opacity: 1 !important;
+            transform: none !important;
         }
     </style>
 </head>
 <body class="antialiased selection:bg-teal-100 selection:text-teal-900">
 
-    <div class="lang-switch-container">
+    <!-- Language Switcher -->
+    <div class="lang-switch-container" role="navigation" aria-label="Language switcher">
         <div class="lang-toggle-pill">
-            <button id="btn-ar" onclick="setLanguage('ar')" class="lang-btn active">العربية</button>
-            <button id="btn-en" onclick="setLanguage('en')" class="lang-btn">EN</button>
+            <button id="btn-ar" class="lang-btn active" aria-pressed="true">العربية</button>
+            <button id="btn-en" class="lang-btn" aria-pressed="false">EN</button>
         </div>
     </div>
 
+    <!-- Hero Section -->
     <section class="relative pt-16 pb-16 md:pt-40 md:pb-32 px-5 sm:px-6">
-        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-teal-50/60 rounded-full blur-[120px] -z-10"></div>
+        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-teal-50/60 rounded-full blur-[120px] -z-10" aria-hidden="true"></div>
 
         <div class="max-w-5xl mx-auto text-center">
             <div class="inline-flex items-center gap-2 bg-teal-50 text-teal-700 px-4 py-2 rounded-full text-xs sm:text-sm font-black mb-6 md:mb-10 reveal js-reveal" id="hero-badge">
-                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                <i data-lucide="sparkles" class="w-4 h-4 shrink-0"></i>
                 <span id="badge-text">مستقبل المحاماة الذكي</span>
             </div>
 
-            <h1 class="hero-title text-4xl md:text-8xl font-black mb-6 md:mb-10 leading-[1.1] tracking-tight reveal js-reveal" id="hero-title">
+            <h1 class="hero-title text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-6 md:mb-10 leading-[1.1] tracking-tight reveal js-reveal" id="hero-title">
                منظومة وكيلي لإدارة المحاماة والقضايا الذكية
                 <br>
                 <span class="gradient-text">ذكاء للعدالة</span>
             </h1>
 
             <div class="mt-8 md:mt-16">
-                <p class="text-lg md:text-3xl text-slate-500 max-w-3xl mx-auto leading-relaxed mb-8 md:mb-14 reveal js-reveal font-medium" id="hero-desc">
+                <p class="text-base sm:text-lg md:text-2xl lg:text-3xl text-slate-500 max-w-3xl mx-auto leading-relaxed mb-8 md:mb-14 reveal js-reveal font-medium" id="hero-desc">
                     حزمة متكاملة من الحلول القانونية الذكية المصممة لتمكين المحامين والمواطنين والشركات في منطقة الشرق الأوسط.
                 </p>
 
                 <div class="reveal js-reveal">
-                    <a href="#ecosystem" class="inline-flex bg-teal-600 text-white px-8 py-4 md:px-12 md:py-6 rounded-2xl font-black text-base md:text-xl hover:bg-teal-700 transition-all shadow-[0_20px_40px_rgba(13,148,136,0.3)] hover:shadow-[0_25px_50px_rgba(13,148,136,0.4)] active:scale-95 items-center gap-3 group">
+                    <a href="#ecosystem" class="inline-flex bg-teal-600 text-white px-7 py-3.5 sm:px-8 sm:py-4 md:px-12 md:py-6 rounded-2xl font-black text-sm sm:text-base md:text-xl hover:bg-teal-700 transition-all shadow-[0_20px_40px_rgba(13,148,136,0.3)] hover:shadow-[0_25px_50px_rgba(13,148,136,0.4)] active:scale-95 items-center gap-3 group">
                         <span id="btn-explore">اكتشف الحلول</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 md:w-6 md:h-6 group-hover:translate-y-1 transition-transform"></i>
+                        <i data-lucide="chevron-down" class="w-5 h-5 md:w-6 md:h-6 group-hover:translate-y-1 transition-transform shrink-0"></i>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Ecosystem Cards -->
     <main id="ecosystem" class="max-w-7xl mx-auto px-5 sm:px-6 pb-24 md:pb-40">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 lg:gap-8">
 
             <!-- Legal Wakeely -->
-            <a href="https://legalwakeely.com/" target="_blank" rel="noopener" class="site-card group reveal js-reveal">
+            <a href="https://legalwakeely.com/" target="_blank" rel="noopener noreferrer" class="site-card group reveal js-reveal">
                 <div class="snapshot-container">
-                    <svg class="snapshot-img" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Legal Wakeely">
+                    <svg class="snapshot-img" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Legal Wakeely" focusable="false">
                         <defs>
                             <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
                                 <stop offset="0%" stop-color="#0d9488"/>
@@ -223,27 +307,27 @@
                         <text x="400" y="270" font-family="Arial, sans-serif" font-weight="900" font-size="56" fill="#ffffff" text-anchor="middle">Legal Wakeely</text>
                         <text x="400" y="315" font-family="Arial, sans-serif" font-size="22" fill="#ccfbf1" text-anchor="middle">Case Tracking Platform</text>
                     </svg>
-                    <div class="absolute inset-0 ring-1 ring-inset ring-black/5"></div>
+                    <div class="absolute inset-0 ring-1 ring-inset ring-black/5" aria-hidden="true"></div>
                 </div>
-                <div class="p-6 md:p-12">
+                <div class="p-5 sm:p-6 md:p-10 lg:p-12">
                     <div class="flex flex-wrap items-center justify-between gap-3 mb-4 md:mb-6">
-                        <h3 class="text-2xl md:text-4xl font-black text-slate-900" id="site1-name">منظومة وكيلي</h3>
-                        <span class="bg-teal-50 text-teal-600 text-xs font-black px-3 py-1.5 md:px-4 md:py-2 rounded-xl uppercase tracking-widest border border-teal-100" id="tag-tracking">تتبع القضايا</span>
+                        <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-slate-900" id="site1-name">منظومة وكيلي</h3>
+                        <span class="bg-teal-50 text-teal-600 text-[10px] sm:text-xs font-black px-2.5 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 rounded-xl uppercase tracking-widest border border-teal-100" id="tag-tracking">تتبع القضايا</span>
                     </div>
-                    <p class="text-slate-500 text-base md:text-xl leading-relaxed mb-6 md:mb-10 font-medium" id="site1-desc">
+                    <p class="text-slate-500 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-5 md:mb-8 font-medium" id="site1-desc">
                         المنصة الأولى لتتبع القضايا القانونية في الوقت الفعلي. وضوح تام، تنبيهات ذكية، وخزنة مستندات آمنة لضمان عدم ضياع أي موعد.
                     </p>
-                    <div class="flex items-center text-teal-600 font-black text-lg md:text-xl gap-3">
+                    <div class="flex items-center text-teal-600 font-black text-base sm:text-lg md:text-xl gap-2 sm:gap-3">
                         <span id="btn-visit1">زيارة الموقع</span>
-                        <i data-lucide="arrow-left" class="w-6 h-6 md:w-7 md:h-7 transition-transform group-hover:-translate-x-3" id="icon1"></i>
+                        <i data-lucide="arrow-left" class="card-arrow w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 shrink-0" id="icon1"></i>
                     </div>
                 </div>
             </a>
 
             <!-- Al Mizan -->
-            <a href="https://almizan.legalwakeely.com/" target="_blank" rel="noopener" class="site-card group reveal js-reveal">
+            <a href="https://almizan.legalwakeely.com/" target="_blank" rel="noopener noreferrer" class="site-card group reveal js-reveal">
                 <div class="snapshot-container">
-                    <svg class="snapshot-img" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Al Mizan">
+                    <svg class="snapshot-img" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Al Mizan" focusable="false">
                         <defs>
                             <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
                                 <stop offset="0%" stop-color="#3b82f6"/>
@@ -256,27 +340,27 @@
                         <text x="400" y="270" font-family="Arial, sans-serif" font-weight="900" font-size="56" fill="#ffffff" text-anchor="middle">Al Mizan</text>
                         <text x="400" y="315" font-family="Arial, sans-serif" font-size="22" fill="#dbeafe" text-anchor="middle">Lawyer Workspace</text>
                     </svg>
-                    <div class="absolute inset-0 ring-1 ring-inset ring-black/5"></div>
+                    <div class="absolute inset-0 ring-1 ring-inset ring-black/5" aria-hidden="true"></div>
                 </div>
-                <div class="p-6 md:p-12">
+                <div class="p-5 sm:p-6 md:p-10 lg:p-12">
                     <div class="flex flex-wrap items-center justify-between gap-3 mb-4 md:mb-6">
-                        <h3 class="text-2xl md:text-4xl font-black text-slate-900" id="site2-name">الميزان</h3>
-                        <span class="bg-blue-50 text-blue-600 text-xs font-black px-3 py-1.5 md:px-4 md:py-2 rounded-xl uppercase tracking-widest border border-blue-100" id="tag-pro">للمحامين</span>
+                        <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-slate-900" id="site2-name">الميزان</h3>
+                        <span class="bg-blue-50 text-blue-600 text-[10px] sm:text-xs font-black px-2.5 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 rounded-xl uppercase tracking-widest border border-blue-100" id="tag-pro">للمحامين</span>
                     </div>
-                    <p class="text-slate-500 text-base md:text-xl leading-relaxed mb-6 md:mb-10 font-medium" id="site2-desc">
+                    <p class="text-slate-500 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-5 md:mb-8 font-medium" id="site2-desc">
                         بيئة عمل ذكية للمحامين. بحث في التشريعات، صياغة آلية للمذكرات، وتحليل استراتيجي للملفات القانونية المعقدة في دقائق.
                     </p>
-                    <div class="flex items-center text-blue-600 font-black text-lg md:text-xl gap-3">
+                    <div class="flex items-center text-blue-600 font-black text-base sm:text-lg md:text-xl gap-2 sm:gap-3">
                         <span id="btn-visit2">زيارة الموقع</span>
-                        <i data-lucide="arrow-left" class="w-6 h-6 md:w-7 md:h-7 transition-transform group-hover:-translate-x-3" id="icon2"></i>
+                        <i data-lucide="arrow-left" class="card-arrow w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 shrink-0" id="icon2"></i>
                     </div>
                 </div>
             </a>
 
             <!-- Haqqi -->
-            <a href="https://haqqi.legalwakeely.com/" target="_blank" rel="noopener" class="site-card group reveal js-reveal">
+            <a href="https://haqqi.legalwakeely.com/" target="_blank" rel="noopener noreferrer" class="site-card group reveal js-reveal">
                 <div class="snapshot-container">
-                    <svg class="snapshot-img" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Haqqi">
+                    <svg class="snapshot-img" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Haqqi" focusable="false">
                         <defs>
                             <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
                                 <stop offset="0%" stop-color="#f97316"/>
@@ -289,27 +373,27 @@
                         <text x="400" y="270" font-family="Arial, sans-serif" font-weight="900" font-size="56" fill="#ffffff" text-anchor="middle">Haqqi</text>
                         <text x="400" y="315" font-family="Arial, sans-serif" font-size="22" fill="#ffedd5" text-anchor="middle">Personal Legal Guide</text>
                     </svg>
-                    <div class="absolute inset-0 ring-1 ring-inset ring-black/5"></div>
+                    <div class="absolute inset-0 ring-1 ring-inset ring-black/5" aria-hidden="true"></div>
                 </div>
-                <div class="p-6 md:p-12">
+                <div class="p-5 sm:p-6 md:p-10 lg:p-12">
                     <div class="flex flex-wrap items-center justify-between gap-3 mb-4 md:mb-6">
-                        <h3 class="text-2xl md:text-4xl font-black text-slate-900" id="site3-name">حقي</h3>
-                        <span class="bg-orange-50 text-orange-600 text-xs font-black px-3 py-1.5 md:px-4 md:py-2 rounded-xl uppercase tracking-widest border border-orange-100" id="tag-citizen">للمواطنين</span>
+                        <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-slate-900" id="site3-name">حقي</h3>
+                        <span class="bg-orange-50 text-orange-600 text-[10px] sm:text-xs font-black px-2.5 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 rounded-xl uppercase tracking-widest border border-orange-100" id="tag-citizen">للمواطنين</span>
                     </div>
-                    <p class="text-slate-500 text-base md:text-xl leading-relaxed mb-6 md:mb-10 font-medium" id="site3-desc">
+                    <p class="text-slate-500 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-5 md:mb-8 font-medium" id="site3-desc">
                         دليلك القانوني الشخصي. ارفع أي وثيقة واحصل على شرح مبسط لحقوقك والتزاماتك، مع إمكانية التواصل مع محامين موثوقين.
                     </p>
-                    <div class="flex items-center text-orange-600 font-black text-lg md:text-xl gap-3">
+                    <div class="flex items-center text-orange-600 font-black text-base sm:text-lg md:text-xl gap-2 sm:gap-3">
                         <span id="btn-visit3">زيارة الموقع</span>
-                        <i data-lucide="arrow-left" class="w-6 h-6 md:w-7 md:h-7 transition-transform group-hover:-translate-x-3" id="icon3"></i>
+                        <i data-lucide="arrow-left" class="card-arrow w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 shrink-0" id="icon3"></i>
                     </div>
                 </div>
             </a>
 
             <!-- CaseCraft -->
-            <a href="https://casecraft.legalwakeely.com/" target="_blank" rel="noopener" class="site-card group reveal js-reveal">
+            <a href="https://casecraft.legalwakeely.com/" target="_blank" rel="noopener noreferrer" class="site-card group reveal js-reveal">
                 <div class="snapshot-container">
-                    <svg class="snapshot-img" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CaseCraft">
+                    <svg class="snapshot-img" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CaseCraft" focusable="false">
                         <defs>
                             <linearGradient id="g4" x1="0" y1="0" x2="1" y2="1">
                                 <stop offset="0%" stop-color="#6366f1"/>
@@ -322,19 +406,19 @@
                         <text x="400" y="270" font-family="Arial, sans-serif" font-weight="900" font-size="56" fill="#ffffff" text-anchor="middle">CaseCraft</text>
                         <text x="400" y="315" font-family="Arial, sans-serif" font-size="22" fill="#e0e7ff" text-anchor="middle">Case Assembly Engine</text>
                     </svg>
-                    <div class="absolute inset-0 ring-1 ring-inset ring-black/5"></div>
+                    <div class="absolute inset-0 ring-1 ring-inset ring-black/5" aria-hidden="true"></div>
                 </div>
-                <div class="p-6 md:p-12">
+                <div class="p-5 sm:p-6 md:p-10 lg:p-12">
                     <div class="flex flex-wrap items-center justify-between gap-3 mb-4 md:mb-6">
-                        <h3 class="text-2xl md:text-4xl font-black text-slate-900" id="site4-name">CaseCraft</h3>
-                        <span class="bg-indigo-50 text-indigo-600 text-xs font-black px-3 py-1.5 md:px-4 md:py-2 rounded-xl uppercase tracking-widest border border-indigo-100" id="tag-intake">تجميع القضايا</span>
+                        <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-slate-900" id="site4-name">CaseCraft</h3>
+                        <span class="bg-indigo-50 text-indigo-600 text-[10px] sm:text-xs font-black px-2.5 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 rounded-xl uppercase tracking-widest border border-indigo-100" id="tag-intake">تجميع القضايا</span>
                     </div>
-                    <p class="text-slate-500 text-base md:text-xl leading-relaxed mb-6 md:mb-10 font-medium" id="site4-desc">
+                    <p class="text-slate-500 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-5 md:mb-8 font-medium" id="site4-desc">
                         تحويل روايات العملاء المبعثرة إلى حزم قضايا منظمة وجاهزة للمراجعة القانونية. استخراج الوقائع وبناء الجداول الزمنية آلياً.
                     </p>
-                    <div class="flex items-center text-indigo-600 font-black text-lg md:text-xl gap-3">
+                    <div class="flex items-center text-indigo-600 font-black text-base sm:text-lg md:text-xl gap-2 sm:gap-3">
                         <span id="btn-visit4">زيارة الموقع</span>
-                        <i data-lucide="arrow-left" class="w-6 h-6 md:w-7 md:h-7 transition-transform group-hover:-translate-x-3" id="icon4"></i>
+                        <i data-lucide="arrow-left" class="card-arrow w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 shrink-0" id="icon4"></i>
                     </div>
                 </div>
             </a>
@@ -342,22 +426,26 @@
         </div>
     </main>
 
-    <footer class="py-16 md:py-28 text-center bg-slate-50 px-5 sm:px-6">
+    <!-- Footer -->
+    <footer class="py-12 md:py-20 lg:py-28 text-center bg-slate-50 px-5 sm:px-6">
         <div class="max-w-lg mx-auto">
-            <h2 class="text-3xl md:text-4xl font-black mb-6 md:mb-8 text-slate-900 tracking-tight">Legal Wakeely</h2>
-            <p class="text-slate-500 text-lg md:text-xl mb-8 md:mb-12 font-medium" id="footer-desc">تمكين العدالة من خلال التكنولوجيا والذكاء الاصطناعي.</p>
-            <div class="w-20 h-1.5 bg-teal-600 mx-auto mb-8 md:mb-12 rounded-full opacity-20"></div>
-            <p class="text-slate-400 text-xs md:text-sm font-bold uppercase tracking-widest leading-loose" id="footer-text">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-black mb-5 md:mb-8 text-slate-900 tracking-tight">Legal Wakeely</h2>
+            <p class="text-slate-500 text-base sm:text-lg md:text-xl mb-6 md:mb-10 font-medium" id="footer-desc">تمكين العدالة من خلال التكنولوجيا والذكاء الاصطناعي.</p>
+            <div class="w-20 h-1.5 bg-teal-600 mx-auto mb-6 md:mb-10 rounded-full opacity-20" aria-hidden="true"></div>
+            <p class="text-slate-400 text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-widest leading-loose" id="footer-text">
                 &copy; 2026 جميع الحقوق محفوظة لمنظومة وكيلي. صُنع في الأردن.
             </p>
         </div>
     </footer>
 
     <script>
-        const translations = {
+    (function () {
+        "use strict";
+
+        var translations = {
             ar: {
                 title: "Legal Wakeely Ecosystem | منظومة ليجال وكيلي",
-                heroTitle: "منظومة ليجال وكيلي <br><span class='gradient-text'>ذكاء للعدالة</span>",
+                heroTitle: "منظومة ليجالوكيلي لإدارة المحاماة<br><span class='gradient-text'>ذكاء للعدالة</span>",
                 heroDesc: "حزمة متكاملة من الحلول القانونية الذكية المصممة لتمكين المحامين والمواطنين والشركات في منطقة الشرق الأوسط.",
                 badge: "مستقبل المحاماة الذكي",
                 btnExplore: "اكتشف الحلول",
@@ -375,15 +463,14 @@
                 tagIntake: "تجميع القضايا",
                 btnVisit: "زيارة الموقع",
                 footerDesc: "تمكين العدالة من خلال التكنولوجيا والذكاء الاصطناعي.",
-                footer: "&copy; 2026 جميع الحقوق محفوظة لمنظومة وكيلي لإدارة المحاماة والقضايا الذكية. صُنع في الأردن.",
+                footer: "\u00a9 2026 جميع الحقوق محفوظة لمنظومة وكيلي لإدارة المحاماة والقضايا الذكية. صُنع في الأردن.",
                 dir: "rtl",
                 lang: "ar",
-                iconClass: "arrow-left",
-                iconHover: "-translate-x-3"
+                icon: "arrow-left"
             },
             en: {
                 title: "Legal Wakeely Ecosystem | AI-Powered Legal Solutions",
-                heroTitle: "Legal Wakeely <br><span class='gradient-text'>AI for Justice</span>",
+                heroTitle: "Legal Wakeely<br><span class='gradient-text'>AI for Justice</span>",
                 heroDesc: "A comprehensive suite of intelligent legal solutions designed to empower lawyers, citizens, and businesses across the MENA region.",
                 badge: "Future of Intelligent Law",
                 btnExplore: "Explore Solutions",
@@ -401,122 +488,98 @@
                 tagIntake: "Case Assembly",
                 btnVisit: "Visit Website",
                 footerDesc: "Empowering justice through technology and artificial intelligence.",
-                footer: "&copy; 2026 Legal Wakeely Ecosystem. All rights reserved. Made in Jordan.",
+                footer: "\u00a9 2026 Legal Wakeely Ecosystem. All rights reserved. Made in Jordan.",
                 dir: "ltr",
                 lang: "en",
-                iconClass: "arrow-right",
-                iconHover: "translate-x-3"
+                icon: "arrow-right"
             }
         };
 
-        let currentLang = 'ar';
-        const hasGsap = typeof gsap !== 'undefined';
-        const hasLucide = typeof lucide !== 'undefined';
+        var currentLang = "ar";
 
-        function safeCreateIcons() {
-            if (hasLucide) {
-                try { lucide.createIcons(); } catch (e) { /* icons are optional */ }
+        function createIcons() {
+            if (typeof lucide !== "undefined") {
+                try { lucide.createIcons(); } catch (e) {}
             }
         }
 
         function setLanguage(lang) {
             if (lang === currentLang) return;
             currentLang = lang;
-            const data = translations[currentLang];
+            var d = translations[lang];
 
-            document.getElementById('btn-ar').classList.toggle('active', lang === 'ar');
-            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById("btn-ar").classList.toggle("active", lang === "ar");
+            document.getElementById("btn-en").classList.toggle("active", lang === "en");
+            document.getElementById("btn-ar").setAttribute("aria-pressed", lang === "ar" ? "true" : "false");
+            document.getElementById("btn-en").setAttribute("aria-pressed", lang === "en" ? "true" : "false");
 
-            const applyContent = () => {
-                document.getElementById('main-html').setAttribute('lang', data.lang);
-                document.getElementById('main-html').setAttribute('dir', data.dir);
-                document.title = data.title;
-                document.getElementById('hero-title').innerHTML = data.heroTitle;
-                document.getElementById('hero-desc').innerText = data.heroDesc;
-                document.getElementById('badge-text').innerText = data.badge;
-                document.getElementById('btn-explore').innerText = data.btnExplore;
+            document.getElementById("main-html").setAttribute("lang", d.lang);
+            document.getElementById("main-html").setAttribute("dir", d.dir);
+            document.title = d.title;
+            document.getElementById("hero-title").innerHTML = d.heroTitle;
+            document.getElementById("hero-desc").textContent = d.heroDesc;
+            document.getElementById("badge-text").textContent = d.badge;
+            document.getElementById("btn-explore").textContent = d.btnExplore;
 
-                document.getElementById('site1-name').innerText = data.site1Name;
-                document.getElementById('site1-desc').innerText = data.site1Desc;
-                document.getElementById('site2-name').innerText = data.site2Name;
-                document.getElementById('site2-desc').innerText = data.site2Desc;
-                document.getElementById('site3-name').innerText = data.site3Name;
-                document.getElementById('site3-desc').innerText = data.site3Desc;
-                document.getElementById('site4-name').innerText = data.site4Name;
-                document.getElementById('site4-desc').innerText = data.site4Desc;
+            document.getElementById("site1-name").textContent = d.site1Name;
+            document.getElementById("site1-desc").textContent = d.site1Desc;
+            document.getElementById("site2-name").textContent = d.site2Name;
+            document.getElementById("site2-desc").textContent = d.site2Desc;
+            document.getElementById("site3-name").textContent = d.site3Name;
+            document.getElementById("site3-desc").textContent = d.site3Desc;
+            document.getElementById("site4-name").textContent = d.site4Name;
+            document.getElementById("site4-desc").textContent = d.site4Desc;
 
-                document.getElementById('tag-tracking').innerText = data.tagTracking;
-                document.getElementById('tag-pro').innerText = data.tagPro;
-                document.getElementById('tag-citizen').innerText = data.tagCitizen;
-                document.getElementById('tag-intake').innerText = data.tagIntake;
+            document.getElementById("tag-tracking").textContent = d.tagTracking;
+            document.getElementById("tag-pro").textContent = d.tagPro;
+            document.getElementById("tag-citizen").textContent = d.tagCitizen;
+            document.getElementById("tag-intake").textContent = d.tagIntake;
 
-                for (let i = 1; i <= 4; i++) {
-                    document.getElementById(`btn-visit${i}`).innerText = data.btnVisit;
-                    const icon = document.getElementById(`icon${i}`);
-                    icon.setAttribute('data-lucide', data.iconClass);
-                    icon.className = `w-6 h-6 md:w-7 md:h-7 transition-transform group-hover:${data.iconHover}`;
-                }
-
-                document.getElementById('footer-desc').innerText = data.footerDesc;
-                document.getElementById('footer-text').innerHTML = data.footer;
-
-                safeCreateIcons();
-            };
-
-            if (hasGsap) {
-                gsap.to("body", { opacity: 0, duration: 0.25, onComplete: () => {
-                    applyContent();
-                    gsap.to("body", { opacity: 1, duration: 0.4 });
-                }});
-            } else {
-                applyContent();
+            for (var i = 1; i <= 4; i++) {
+                document.getElementById("btn-visit" + i).textContent = d.btnVisit;
+                var icon = document.getElementById("icon" + i);
+                icon.setAttribute("data-lucide", d.icon);
             }
+
+            document.getElementById("footer-desc").textContent = d.footerDesc;
+            document.getElementById("footer-text").innerHTML = d.footer;
+
+            createIcons();
         }
 
         function init() {
-            safeCreateIcons();
+            createIcons();
 
-            if (!hasGsap) return; // content is visible by default via CSS, nothing else to do
+            var hasGsap = typeof gsap !== "undefined";
+            if (!hasGsap) return;
 
-            document.documentElement.classList.add('js-ready');
-            gsap.set(".js-reveal", { opacity: 0, y: 24 });
-            gsap.to(".js-reveal", {
+            document.documentElement.classList.add("js-ready");
+
+            gsap.set(".reveal.js-reveal", { opacity: 0, y: 20 });
+
+            gsap.to(".reveal.js-reveal", {
                 opacity: 1,
                 y: 0,
-                duration: 1,
-                stagger: 0.12,
-                ease: "power3.out"
+                duration: 0.8,
+                stagger: 0.1,
+                ease: "power3.out",
+                delay: 0.1
             });
 
-            if (typeof ScrollTrigger !== 'undefined') {
+            if (typeof ScrollTrigger !== "undefined") {
                 gsap.registerPlugin(ScrollTrigger);
-                gsap.utils.toArray(".site-card").forEach((card) => {
-                    gsap.fromTo(card,
-                        { opacity: 0, y: 30 },
-                        {
-                            opacity: 1,
-                            y: 0,
-                            duration: 1,
-                            ease: "power3.out",
-                            scrollTrigger: {
-                                trigger: card,
-                                start: "top 95%",
-                                toggleActions: "play none none none"
-                            }
-                        }
-                    );
-                });
             }
         }
 
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', init);
+        document.getElementById("btn-ar").addEventListener("click", function () { setLanguage("ar"); });
+        document.getElementById("btn-en").addEventListener("click", function () { setLanguage("en"); });
+
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", init);
         } else {
             init();
         }
-        // Absolute safety net: if anything above throws, content is still visible
-        // because .reveal defaults to opacity:1 and only becomes hidden once
-        // .js-ready is added right before the animation is scheduled.
+    })();
     </script>
 </body>
 </html>
