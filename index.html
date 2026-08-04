@@ -60,14 +60,14 @@
             height: auto;
             object-fit: cover;
             object-position: top;
-            transition: transform 8s linear; /* Slow scroll simulation */
+            transition: transform 8s linear;
         }
 
         .site-card:hover .snapshot-img {
-            transform: translateY(calc(-100% + 400px)); /* Scrolls to bottom based on card height */
+            transform: translateY(calc(-100% + 400px));
         }
 
-        /* Redesigned Language Toggle */
+        /* Language Toggle */
         .lang-switch-container {
             position: fixed;
             bottom: 30px;
@@ -108,6 +108,9 @@
             font-weight: 800;
             font-size: 14px;
             transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            background: transparent;
         }
 
         .lang-btn.active {
@@ -146,11 +149,22 @@
                 border-radius: 24px;
             }
         }
+
+        /* Better touch support for snapshot scrolling */
+        @media (hover: none) {
+            .snapshot-img {
+                transform: translateY(0) !important;
+            }
+            .site-card:active .snapshot-img {
+                transform: translateY(calc(-100% + 200px)) !important;
+                transition: transform 0.4s ease;
+            }
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-teal-100 selection:text-teal-900">
 
-    <!-- Redesigned Language Switcher -->
+    <!-- Language Switcher -->
     <div class="lang-switch-container">
         <div class="lang-toggle-pill">
             <button id="btn-ar" onclick="setLanguage('ar')" class="lang-btn active">العربية</button>
@@ -173,7 +187,6 @@
                 <span class="gradient-text">ذكاء للعدالة</span>
             </h1>
             
-            <!-- Increased spacing here -->
             <div class="mt-16 md:mt-24">
                 <p class="text-xl md:text-3xl text-slate-500 max-w-3xl mx-auto leading-relaxed mb-16 reveal font-medium" id="hero-desc">
                     حزمة متكاملة من الحلول القانونية الذكية المصممة لتمكين المحامين والمواطنين والشركات في منطقة الشرق الأوسط.
@@ -196,7 +209,12 @@
             <!-- Legal Wakeely -->
             <a href="https://legalwakeely.com/" target="_blank" class="site-card group reveal">
                 <div class="snapshot-container">
-                    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663741330274/aTcUIXhHEglYapZl.webp" alt="Legal Wakeely" class="snapshot-img">
+                    <img 
+                        src="https://placehold.co/600x400/0d9488/ffffff?text=Legal+Wakeely" 
+                        alt="Legal Wakeely platform snapshot"
+                        loading="lazy"
+                        class="snapshot-img"
+                    >
                     <div class="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-t-[32px]"></div>
                 </div>
                 <div class="p-8 md:p-12">
@@ -217,7 +235,12 @@
             <!-- Al Mizan -->
             <a href="https://almizan.legalwakeely.com/" target="_blank" class="site-card group reveal">
                 <div class="snapshot-container">
-                    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663741330274/avNGlPhmDHwwNTXJ.webp" alt="Al Mizan" class="snapshot-img">
+                    <img 
+                        src="https://placehold.co/600x400/3b82f6/ffffff?text=Al+Mizan" 
+                        alt="Al Mizan platform snapshot"
+                        loading="lazy"
+                        class="snapshot-img"
+                    >
                     <div class="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-t-[32px]"></div>
                 </div>
                 <div class="p-8 md:p-12">
@@ -238,7 +261,12 @@
             <!-- Haqqi -->
             <a href="https://haqqi.legalwakeely.com/" target="_blank" class="site-card group reveal">
                 <div class="snapshot-container">
-                    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663741330274/OAfchuXTYuQjssau.webp" alt="Haqqi" class="snapshot-img">
+                    <img 
+                        src="https://placehold.co/600x400/f97316/ffffff?text=Haqqi" 
+                        alt="Haqqi platform snapshot"
+                        loading="lazy"
+                        class="snapshot-img"
+                    >
                     <div class="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-t-[32px]"></div>
                 </div>
                 <div class="p-8 md:p-12">
@@ -259,7 +287,12 @@
             <!-- CaseCraft -->
             <a href="https://casecraft.legalwakeely.com/" target="_blank" class="site-card group reveal">
                 <div class="snapshot-container">
-                    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663741330274/IsYvmJioMUBypOCU.webp" alt="CaseCraft" class="snapshot-img">
+                    <img 
+                        src="https://placehold.co/600x400/6366f1/ffffff?text=CaseCraft" 
+                        alt="CaseCraft platform snapshot"
+                        loading="lazy"
+                        class="snapshot-img"
+                    >
                     <div class="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-t-[32px]"></div>
                 </div>
                 <div class="p-8 md:p-12">
@@ -348,6 +381,8 @@
             }
         };
 
+        let currentLang = 'ar';
+
         function setLanguage(lang) {
             if (lang === currentLang) return;
             currentLang = lang;
@@ -405,8 +440,6 @@
                 });
             }});
         }
-
-        let currentLang = 'ar';
 
         // GSAP Setup
         gsap.registerPlugin(ScrollTrigger);
