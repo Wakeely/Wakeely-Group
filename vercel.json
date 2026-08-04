@@ -1,5 +1,1 @@
-{
-  "routes": [
-    { "src": "/", "dest": "/main.html" }
-  ]
-}
+{ "routes": [ { "src": "/", "dest": "/Wakeely%20Group.html" } ] }
