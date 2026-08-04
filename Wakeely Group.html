@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="main-html" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Legal Wakeely Ecosystem |  للذكاء الإصطناعى  منظومة وكيلي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        :root {
+            --brand-teal: #0d9488;
+            --font-ar: 'Tajawal', sans-serif;
+            --font-en: 'Poppins', sans-serif;
+        }
+
+        * {
+            -webkit-tap-highlight-color: transparent;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-ar);
+            background-color: #ffffff;
+            color: #0f172a;
+            overflow-x: hidden;
+        }
+
+        [dir="ltr"] body {
+            font-family: var(--font-en);
+        }
+
+        /* Boldness for English */
+        [dir="ltr"] h1, [dir="ltr"] h2, [dir="ltr"] h3, [dir="ltr"] .font-bold-en {
+            font-weight: 900 !important;
+            letter-spacing: -0.02em;
+        }
+
+        /* Site Card & Animated Snapshot */
+        .site-card {
+            background: #ffffff;
+            border-radius: 32px;
+            overflow: hidden;
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            border: 1px solid #f1f5f9;
+            display: block;
+        }
+
+        .snapshot-container {
+            position: relative;
+            aspect-ratio: 16/10;
+            overflow: hidden;
+            background: #f8fafc;
+        }
+
+        .snapshot-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: top;
+            transition: transform 8s linear; /* Slow scroll simulation */
+        }
+
+        .site-card:hover .snapshot-img {
+            transform: translateY(calc(-100% + 400px)); /* Scrolls to bottom based on card height */
+        }
+
+        /* Redesigned Language Toggle */
+        .lang-switch-container {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+
+        @media (min-width: 768px) {
+            .lang-switch-container {
+                top: 30px;
+                bottom: auto;
+                right: 30px;
+                left: auto;
+                transform: none;
+            }
+            [dir="ltr"] .lang-switch-container {
+                right: auto;
+                left: 30px;
+            }
+        }
+
+        .lang-toggle-pill {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(13, 148, 136, 0.2);
+            padding: 6px;
+            border-radius: 20px;
+            display: flex;
+            gap: 4px;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            border-radius: 14px;
+            font-weight: 800;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--brand-teal);
+            color: white;
+            box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+        }
+
+        .lang-btn:not(.active) {
+            color: #64748b;
+        }
+
+        .lang-btn:not(.active):hover {
+            background: rgba(13, 148, 136, 0.05);
+            color: var(--brand-teal);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #0d9488 0%, #0ea5e9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 640px) {
+            .hero-title {
+                font-size: 2.75rem !important;
+                line-height: 1.1 !important;
+            }
+            .site-card {
+                border-radius: 24px;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-teal-100 selection:text-teal-900">
+
+    <!-- Redesigned Language Switcher -->
+    <div class="lang-switch-container">
+        <div class="lang-toggle-pill">
+            <button id="btn-ar" onclick="setLanguage('ar')" class="lang-btn active">العربية</button>
+            <button id="btn-en" onclick="setLanguage('en')" class="lang-btn">EN</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-24 pb-24 md:pt-48 md:pb-40 px-6">
+        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-teal-50/60 rounded-full blur-[120px] -z-10"></div>
+        
+        <div class="max-w-5xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 bg-teal-50 text-teal-700 px-5 py-2 rounded-full text-sm font-black mb-12 reveal" id="hero-badge">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                <span id="badge-text">مستقبل المحاماة الذكي</span>
+            </div>
+            
+            <h1 class="hero-title text-5xl md:text-8xl font-black mb-12 leading-[1.05] tracking-tight reveal" id="hero-title">
+                منظومة ليجال وكيلي <br>
+                <span class="gradient-text">ذكاء للعدالة</span>
+            </h1>
+            
+            <!-- Increased spacing here -->
+            <div class="mt-16 md:mt-24">
+                <p class="text-xl md:text-3xl text-slate-500 max-w-3xl mx-auto leading-relaxed mb-16 reveal font-medium" id="hero-desc">
+                    حزمة متكاملة من الحلول القانونية الذكية المصممة لتمكين المحامين والمواطنين والشركات في منطقة الشرق الأوسط.
+                </p>
+                
+                <div class="reveal">
+                    <a href="#ecosystem" class="inline-flex bg-teal-600 text-white px-12 py-6 rounded-2xl font-black text-xl hover:bg-teal-700 transition-all shadow-[0_20px_40px_rgba(13,148,136,0.3)] hover:shadow-[0_25px_50px_rgba(13,148,136,0.4)] active:scale-95 items-center gap-3 group">
+                        <span id="btn-explore">اكتشف الحلول</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 group-hover:translate-y-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid Section -->
+    <main id="ecosystem" class="max-w-7xl mx-auto px-6 pb-48">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
+            
+            <!-- Legal Wakeely -->
+            <a href="https://legalwakeely.com/" target="_blank" class="site-card group reveal">
+                <div class="snapshot-container">
+                    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663741330274/aTcUIXhHEglYapZl.webp" alt="Legal Wakeely" class="snapshot-img">
+                    <div class="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-t-[32px]"></div>
+                </div>
+                <div class="p-8 md:p-12">
+                    <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+                        <h3 class="text-3xl md:text-4xl font-black text-slate-900" id="site1-name">ليجال وكيلي</h3>
+                        <span class="bg-teal-50 text-teal-600 text-xs font-black px-4 py-2 rounded-xl uppercase tracking-widest border border-teal-100" id="tag-tracking">تتبع القضايا</span>
+                    </div>
+                    <p class="text-slate-500 text-lg md:text-xl leading-relaxed mb-10 font-medium" id="site1-desc">
+                        المنصة الأولى لتتبع القضايا القانونية في الوقت الفعلي. وضوح تام، تنبيهات ذكية، وخزنة مستندات آمنة لضمان عدم ضياع أي موعد.
+                    </p>
+                    <div class="flex items-center text-teal-600 font-black text-xl gap-3">
+                        <span id="btn-visit1">زيارة الموقع</span>
+                        <i data-lucide="arrow-left" class="w-7 h-7 transition-transform group-hover:-translate-x-4" id="icon1"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Al Mizan -->
+            <a href="https://almizan.legalwakeely.com/" target="_blank" class="site-card group reveal">
+                <div class="snapshot-container">
+                    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663741330274/avNGlPhmDHwwNTXJ.webp" alt="Al Mizan" class="snapshot-img">
+                    <div class="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-t-[32px]"></div>
+                </div>
+                <div class="p-8 md:p-12">
+                    <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+                        <h3 class="text-3xl md:text-4xl font-black text-slate-900" id="site2-name">الميزان</h3>
+                        <span class="bg-blue-50 text-blue-600 text-xs font-black px-4 py-2 rounded-xl uppercase tracking-widest border border-blue-100" id="tag-pro">للمحامين</span>
+                    </div>
+                    <p class="text-slate-500 text-lg md:text-xl leading-relaxed mb-10 font-medium" id="site2-desc">
+                        بيئة عمل ذكية للمحامين. بحث في التشريعات، صياغة آلية للمذكرات، وتحليل استراتيجي للملفات القانونية المعقدة في دقائق.
+                    </p>
+                    <div class="flex items-center text-blue-600 font-black text-xl gap-3">
+                        <span id="btn-visit2">زيارة الموقع</span>
+                        <i data-lucide="arrow-left" class="w-7 h-7 transition-transform group-hover:-translate-x-4" id="icon2"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Haqqi -->
+            <a href="https://haqqi.legalwakeely.com/" target="_blank" class="site-card group reveal">
+                <div class="snapshot-container">
+                    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663741330274/OAfchuXTYuQjssau.webp" alt="Haqqi" class="snapshot-img">
+                    <div class="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-t-[32px]"></div>
+                </div>
+                <div class="p-8 md:p-12">
+                    <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+                        <h3 class="text-3xl md:text-4xl font-black text-slate-900" id="site3-name">حقي</h3>
+                        <span class="bg-orange-50 text-orange-600 text-xs font-black px-4 py-2 rounded-xl uppercase tracking-widest border border-orange-100" id="tag-citizen">للمواطنين</span>
+                    </div>
+                    <p class="text-slate-500 text-lg md:text-xl leading-relaxed mb-10 font-medium" id="site3-desc">
+                        دليلك القانوني الشخصي. ارفع أي وثيقة واحصل على شرح مبسط لحقوقك والتزاماتك، مع إمكانية التواصل مع محامين موثوقين.
+                    </p>
+                    <div class="flex items-center text-orange-600 font-black text-xl gap-3">
+                        <span id="btn-visit3">زيارة الموقع</span>
+                        <i data-lucide="arrow-left" class="w-7 h-7 transition-transform group-hover:-translate-x-4" id="icon3"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- CaseCraft -->
+            <a href="https://casecraft.legalwakeely.com/" target="_blank" class="site-card group reveal">
+                <div class="snapshot-container">
+                    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663741330274/IsYvmJioMUBypOCU.webp" alt="CaseCraft" class="snapshot-img">
+                    <div class="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-t-[32px]"></div>
+                </div>
+                <div class="p-8 md:p-12">
+                    <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+                        <h3 class="text-3xl md:text-4xl font-black text-slate-900" id="site4-name">CaseCraft</h3>
+                        <span class="bg-indigo-50 text-indigo-600 text-xs font-black px-4 py-2 rounded-xl uppercase tracking-widest border border-indigo-100" id="tag-intake">تجميع القضايا</span>
+                    </div>
+                    <p class="text-slate-500 text-lg md:text-xl leading-relaxed mb-10 font-medium" id="site4-desc">
+                        تحويل روايات العملاء المبعثرة إلى حزم قضايا منظمة وجاهزة للمراجعة القانونية. استخراج الوقائع وبناء الجداول الزمنية آلياً.
+                    </p>
+                    <div class="flex items-center text-indigo-600 font-black text-xl gap-3">
+                        <span id="btn-visit4">زيارة الموقع</span>
+                        <i data-lucide="arrow-left" class="w-7 h-7 transition-transform group-hover:-translate-x-4" id="icon4"></i>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-32 text-center bg-slate-50 px-6">
+        <div class="max-w-lg mx-auto">
+            <h2 class="text-4xl font-black mb-8 text-slate-900 tracking-tight">Legal Wakeely</h2>
+            <p class="text-slate-500 text-xl mb-12 font-medium" id="footer-desc">تمكين العدالة من خلال التكنولوجيا والذكاء الاصطناعي.</p>
+            <div class="w-20 h-1.5 bg-teal-600 mx-auto mb-12 rounded-full opacity-20"></div>
+            <p class="text-slate-400 text-sm font-bold uppercase tracking-widest leading-loose" id="footer-text">
+                &copy; 2026 جميع الحقوق محفوظة لمنظومة ليجال وكيلي. صُنع في الأردن.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            ar: {
+                title: "Legal Wakeely Ecosystem | منظومة ليجال وكيلي",
+                heroTitle: "منظومة ليجال وكيلي <br><span class='gradient-text'>ذكاء للعدالة</span>",
+                heroDesc: "حزمة متكاملة من الحلول القانونية الذكية المصممة لتمكين المحامين والمواطنين والشركات في منطقة الشرق الأوسط.",
+                badge: "مستقبل المحاماة الذكي",
+                btnExplore: "اكتشف الحلول",
+                site1Name: "ليجال وكيلي",
+                site1Desc: "المنصة الأولى لتتبع القضايا القانونية في الوقت الفعلي. وضوح تام، تنبيهات ذكية، وخزنة مستندات آمنة لضمان عدم ضياع أي موعد.",
+                site2Name: "الميزان",
+                site2Desc: "بيئة عمل ذكية للمحامين. بحث في التشريعات، صياغة آلية للمذكرات، وتحليل استراتيجي للملفات القانونية المعقدة في دقائق.",
+                site3Name: "حقي",
+                site3Desc: "دليلك القانوني الشخصي. ارفع أي وثيقة واحصل على شرح مبسط لحقوقك والتزاماتك، مع إمكانية التواصل مع محامين موثوقين.",
+                site4Name: "CaseCraft",
+                site4Desc: "تحويل روايات العملاء المبعثرة إلى حزم قضايا منظمة وجاهزة للمراجعة القانونية. استخراج الوقائع وبناء الجداول الزمنية آلياً.",
+                tagTracking: "تتبع القضايا",
+                tagPro: "للمحامين",
+                tagCitizen: "للمواطنين",
+                tagIntake: "تجميع القضايا",
+                btnVisit: "زيارة الموقع",
+                footerDesc: "تمكين العدالة من خلال التكنولوجيا والذكاء الاصطناعي.",
+                footer: "&copy; 2026 جميع الحقوق محفوظة لمنظومة ليجال وكيلي. صُنع في الأردن.",
+                dir: "rtl",
+                lang: "ar",
+                iconClass: "arrow-left",
+                iconHover: "-translate-x-4"
+            },
+            en: {
+                title: "Legal Wakeely Ecosystem | AI-Powered Legal Solutions",
+                heroTitle: "Legal Wakeely <br><span class='gradient-text'>AI for Justice</span>",
+                heroDesc: "A comprehensive suite of intelligent legal solutions designed to empower lawyers, citizens, and businesses across the MENA region.",
+                badge: "Future of Intelligent Law",
+                btnExplore: "Explore Solutions",
+                site1Name: "Legal Wakeely",
+                site1Desc: "The premier real-time legal case tracking platform. Total clarity, smart alerts, and secure document vault to ensure no deadline is ever missed.",
+                site2Name: "Al Mizan",
+                site2Desc: "A smart workspace for lawyers. Legislative research, automated drafting of motions, and strategic analysis of complex legal files in minutes.",
+                site3Name: "Haqqi",
+                site3Desc: "Your personal legal guide. Upload any document and get a simplified explanation of your rights and obligations, with access to trusted lawyers.",
+                site4Name: "CaseCraft",
+                site4Desc: "Transforming messy client narratives into organized case packages ready for legal review. Automated fact extraction and timeline building.",
+                tagTracking: "Case Tracking",
+                tagPro: "For Lawyers",
+                tagCitizen: "For Citizens",
+                tagIntake: "Case Assembly",
+                btnVisit: "Visit Website",
+                footerDesc: "Empowering justice through technology and artificial intelligence.",
+                footer: "&copy; 2026 Legal Wakeely Ecosystem. All rights reserved. Made in Jordan.",
+                dir: "ltr",
+                lang: "en",
+                iconClass: "arrow-right",
+                iconHover: "translate-x-4"
+            }
+        };
+
+        function setLanguage(lang) {
+            if (lang === currentLang) return;
+            currentLang = lang;
+            const data = translations[currentLang];
+
+            // Update Toggle State
+            document.getElementById('btn-ar').classList.toggle('active', lang === 'ar');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+
+            // Animation Out
+            gsap.to("body", { opacity: 0, duration: 0.3, onComplete: () => {
+                // Update DOM
+                document.getElementById('main-html').setAttribute('lang', data.lang);
+                document.getElementById('main-html').setAttribute('dir', data.dir);
+                document.title = data.title;
+                document.getElementById('hero-title').innerHTML = data.heroTitle;
+                document.getElementById('hero-desc').innerText = data.heroDesc;
+                document.getElementById('badge-text').innerText = data.badge;
+                document.getElementById('btn-explore').innerText = data.btnExplore;
+                
+                document.getElementById('site1-name').innerText = data.site1Name;
+                document.getElementById('site1-desc').innerText = data.site1Desc;
+                document.getElementById('site2-name').innerText = data.site2Name;
+                document.getElementById('site2-desc').innerText = data.site2Desc;
+                document.getElementById('site3-name').innerText = data.site3Name;
+                document.getElementById('site3-desc').innerText = data.site3Desc;
+                document.getElementById('site4-name').innerText = data.site4Name;
+                document.getElementById('site4-desc').innerText = data.site4Desc;
+
+                document.getElementById('tag-tracking').innerText = data.tagTracking;
+                document.getElementById('tag-pro').innerText = data.tagPro;
+                document.getElementById('tag-citizen').innerText = data.tagCitizen;
+                document.getElementById('tag-intake').innerText = data.tagIntake;
+
+                for(let i=1; i<=4; i++) {
+                    document.getElementById(`btn-visit${i}`).innerText = data.btnVisit;
+                    const icon = document.getElementById(`icon${i}`);
+                    icon.setAttribute('data-lucide', data.iconClass);
+                    icon.className = `w-7 h-7 transition-transform group-hover:${data.iconHover}`;
+                }
+
+                document.getElementById('footer-desc').innerText = data.footerDesc;
+                document.getElementById('footer-text').innerHTML = data.footer;
+
+                lucide.createIcons();
+                
+                // Animation In
+                gsap.to("body", { opacity: 1, duration: 0.5 });
+                gsap.from(".hero-title, #hero-desc", {
+                    y: 30,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.2,
+                    ease: "power4.out"
+                });
+            }});
+        }
+
+        let currentLang = 'ar';
+
+        // GSAP Setup
+        gsap.registerPlugin(ScrollTrigger);
+
+        window.addEventListener('load', () => {
+            lucide.createIcons();
+
+            // Initial Entrance
+            gsap.to(".reveal", {
+                opacity: 1,
+                y: 0,
+                duration: 1.2,
+                stagger: 0.15,
+                ease: "power4.out"
+            });
+
+            // Card Scroll Animations
+            gsap.utils.toArray(".site-card").forEach((card) => {
+                gsap.to(card, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    ease: "power4.out",
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 95%",
+                        toggleActions: "play none none none"
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
