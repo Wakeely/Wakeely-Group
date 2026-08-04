@@ -32,13 +32,11 @@
             font-family: var(--font-en);
         }
 
-        /* Boldness for English */
         [dir="ltr"] h1, [dir="ltr"] h2, [dir="ltr"] h3, [dir="ltr"] .font-bold-en {
             font-weight: 900 !important;
             letter-spacing: -0.02em;
         }
 
-        /* Site Card & Animated Snapshot */
         .site-card {
             background: #ffffff;
             border-radius: 32px;
@@ -67,7 +65,6 @@
             transform: translateY(calc(-100% + 400px));
         }
 
-        /* Language Toggle */
         .lang-switch-container {
             position: fixed;
             bottom: 30px;
@@ -139,7 +136,6 @@
             transform: translateY(40px);
         }
 
-        /* Mobile Optimization */
         @media (max-width: 640px) {
             .hero-title {
                 font-size: 2.75rem !important;
@@ -150,7 +146,6 @@
             }
         }
 
-        /* Better touch support for snapshot scrolling */
         @media (hover: none) {
             .snapshot-img {
                 transform: translateY(0) !important;
@@ -164,7 +159,6 @@
 </head>
 <body class="antialiased selection:bg-teal-100 selection:text-teal-900">
 
-    <!-- Language Switcher -->
     <div class="lang-switch-container">
         <div class="lang-toggle-pill">
             <button id="btn-ar" onclick="setLanguage('ar')" class="lang-btn active">العربية</button>
@@ -172,7 +166,6 @@
         </div>
     </div>
 
-    <!-- Hero Section -->
     <section class="relative pt-24 pb-24 md:pt-48 md:pb-40 px-6">
         <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-teal-50/60 rounded-full blur-[120px] -z-10"></div>
         
@@ -202,7 +195,6 @@
         </div>
     </section>
 
-    <!-- Grid Section -->
     <main id="ecosystem" class="max-w-7xl mx-auto px-6 pb-48">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
             
@@ -210,10 +202,11 @@
             <a href="https://legalwakeely.com/" target="_blank" class="site-card group reveal">
                 <div class="snapshot-container">
                     <img 
-                        src="https://placehold.co/600x400/0d9488/ffffff?text=Legal+Wakeely" 
+                        src="image2/legal-wakeely.png" 
                         alt="Legal Wakeely platform snapshot"
                         loading="lazy"
                         class="snapshot-img"
+                        onerror="this.style.display='none'; this.parentElement.style.background='#0d9488'; this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;color:white;font-weight:bold;font-size:1.5rem;\'>Legal Wakeely</div>'"
                     >
                     <div class="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-t-[32px]"></div>
                 </div>
@@ -236,10 +229,11 @@
             <a href="https://almizan.legalwakeely.com/" target="_blank" class="site-card group reveal">
                 <div class="snapshot-container">
                     <img 
-                        src="https://placehold.co/600x400/3b82f6/ffffff?text=Al+Mizan" 
+                        src="image2/al-mizan.png" 
                         alt="Al Mizan platform snapshot"
                         loading="lazy"
                         class="snapshot-img"
+                        onerror="this.style.display='none'; this.parentElement.style.background='#3b82f6'; this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;color:white;font-weight:bold;font-size:1.5rem;\'>Al Mizan</div>'"
                     >
                     <div class="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-t-[32px]"></div>
                 </div>
@@ -262,10 +256,11 @@
             <a href="https://haqqi.legalwakeely.com/" target="_blank" class="site-card group reveal">
                 <div class="snapshot-container">
                     <img 
-                        src="https://placehold.co/600x400/f97316/ffffff?text=Haqqi" 
+                        src="image2/haqqi.png" 
                         alt="Haqqi platform snapshot"
                         loading="lazy"
                         class="snapshot-img"
+                        onerror="this.style.display='none'; this.parentElement.style.background='#f97316'; this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;color:white;font-weight:bold;font-size:1.5rem;\'>Haqqi</div>'"
                     >
                     <div class="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-t-[32px]"></div>
                 </div>
@@ -288,10 +283,11 @@
             <a href="https://casecraft.legalwakeely.com/" target="_blank" class="site-card group reveal">
                 <div class="snapshot-container">
                     <img 
-                        src="https://placehold.co/600x400/6366f1/ffffff?text=CaseCraft" 
+                        src="image2/casecraft.png" 
                         alt="CaseCraft platform snapshot"
                         loading="lazy"
                         class="snapshot-img"
+                        onerror="this.style.display='none'; this.parentElement.style.background='#6366f1'; this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;color:white;font-weight:bold;font-size:1.5rem;\'>CaseCraft</div>'"
                     >
                     <div class="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-t-[32px]"></div>
                 </div>
@@ -313,7 +309,6 @@
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="py-32 text-center bg-slate-50 px-6">
         <div class="max-w-lg mx-auto">
             <h2 class="text-4xl font-black mb-8 text-slate-900 tracking-tight">Legal Wakeely</h2>
@@ -388,13 +383,10 @@
             currentLang = lang;
             const data = translations[currentLang];
 
-            // Update Toggle State
             document.getElementById('btn-ar').classList.toggle('active', lang === 'ar');
             document.getElementById('btn-en').classList.toggle('active', lang === 'en');
 
-            // Animation Out
             gsap.to("body", { opacity: 0, duration: 0.3, onComplete: () => {
-                // Update DOM
                 document.getElementById('main-html').setAttribute('lang', data.lang);
                 document.getElementById('main-html').setAttribute('dir', data.dir);
                 document.title = data.title;
@@ -429,7 +421,6 @@
 
                 lucide.createIcons();
                 
-                // Animation In
                 gsap.to("body", { opacity: 1, duration: 0.5 });
                 gsap.from(".hero-title, #hero-desc", {
                     y: 30,
@@ -441,13 +432,10 @@
             }});
         }
 
-        // GSAP Setup
         gsap.registerPlugin(ScrollTrigger);
 
         window.addEventListener('load', () => {
             lucide.createIcons();
-
-            // Initial Entrance
             gsap.to(".reveal", {
                 opacity: 1,
                 y: 0,
@@ -455,8 +443,6 @@
                 stagger: 0.15,
                 ease: "power4.out"
             });
-
-            // Card Scroll Animations
             gsap.utils.toArray(".site-card").forEach((card) => {
                 gsap.to(card, {
                     opacity: 1,
