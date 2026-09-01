@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 <title>LegalWakeely — شبكة الخدمات القانونية الرقمية</title>
-<meta name="description" content="ثماني منصات قانونية ذكية في شبكة واحدة: WakeelyPro، حقّي، CaseCraft، الميزان، LegalWakeely، Rent Autopilot، مرآة Haqqi على Render، وGoogle Haqqi على Vercel.">
+<meta name="description" content="اثنتا عشرة منصة في شبكة واحدة: ثماني خدمات من LegalWakeely (WakeelyPro، حقّي، CaseCraft، الميزان، LegalWakeely، Rent Autopilot، مرآة Haqqi على Render، وGoogle Haqqi على Vercel) وأربع منصات من مجموعة مخمن (mokhamen.com، how.mokhamen.com، g.mokhamen.com، rent.mokhamen.com).">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -250,6 +250,120 @@
   .card-cta:hover svg{transform:translateX(3px);}
   html[dir="rtl"] .card-cta:hover svg{transform:scaleX(-1) translateX(3px);}
   .card-url{font-size:0.76rem; color:#8a8265; margin-top:10px; letter-spacing:0.02em;}
+
+  /* ---------- Mokhamen visual family (distinct from legal cards) ---------- */
+  .card.mokhamen{
+    background:linear-gradient(155deg, #0f2a38 0%, #0a1f2c 100%);
+    color:#eaf6f3;
+    border:1px solid rgba(56,211,197,0.28);
+    box-shadow:0 10px 30px -22px rgba(0,0,0,0.65);
+  }
+  .card.mokhamen:hover{box-shadow:0 26px 44px -22px rgba(56,211,197,0.35);}
+  .card.mokhamen::after{
+    background:linear-gradient(90deg, #38d3c5 0%, #6e8cff 100%);
+    width:54px; height:6px;
+    box-shadow:0 0 14px rgba(56,211,197,0.55);
+  }
+  .card.mokhamen .card-seal{
+    border-color:#38d3c5;
+    color:#38d3c5;
+    background:rgba(56,211,197,0.08);
+    box-shadow:0 0 0 4px rgba(56,211,197,0.08);
+  }
+  .card.mokhamen .card-index{
+    color:transparent;
+    -webkit-text-stroke:1px rgba(56,211,197,0.7);
+    font-family:var(--sans-en);
+  }
+  .card.mokhamen h3{
+    color:#f0fbf8;
+    font-family:var(--sans-en);
+    letter-spacing:-0.01em;
+  }
+  html[lang="ar"] .card.mokhamen h3.display{
+    font-family:var(--sans-ar);
+    color:#f0fbf8;
+  }
+  .card.mokhamen .tagline{
+    color:#38d3c5;
+    font-family:var(--sans-en);
+    letter-spacing:0.02em;
+  }
+  html[lang="ar"] .card.mokhamen .tagline{font-family:var(--sans-ar);}
+  .card.mokhamen p.desc{
+    color:#a8c2c8;
+  }
+  .card.mokhamen .feature-list li{
+    color:#cfe2e6;
+    border-top:1px dashed rgba(56,211,197,0.22);
+  }
+  .card.mokhamen .feature-list li::before{
+    color:#38d3c5;
+    content:"▸";
+  }
+  .card.mokhamen .card-cta{
+    background:#38d3c5;
+    color:#062029;
+  }
+  .card.mokhamen .card-cta:hover{
+    background:#6e8cff;
+    color:#06112b;
+  }
+  .card.mokhamen .card-url{
+    color:#6fb8ad;
+    font-family:var(--sans-en);
+    letter-spacing:0.06em;
+    text-transform:lowercase;
+  }
+
+  /* Mokhamen preview card */
+  .preview-card.mokhamen{
+    background:#061824;
+    border:1px solid rgba(56,211,197,0.25);
+  }
+  .preview-card.mokhamen .preview-chrome{
+    background:#04131d;
+    border-bottom:1px solid rgba(56,211,197,0.2);
+  }
+  .preview-card.mokhamen .preview-addr{
+    color:#7fd6c8;
+    background:rgba(56,211,197,0.06);
+    border-color:rgba(56,211,197,0.18);
+  }
+  .preview-card.mokhamen .preview-frame-wrap{background:#04131d;}
+  .preview-card.mokhamen .preview-open span{
+    background:#38d3c5;
+    color:#062029;
+  }
+  .preview-card.mokhamen:hover .preview-open span{color:#062029;}
+  .preview-card.mokhamen .preview-caption{color:#7faab0;}
+  .preview-card.mokhamen .preview-caption .dot.shot{background:#38d3c5;}
+
+  /* Mokhamen monogram block (replaces logo screenshot) */
+  .mokhamen-mono{
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    height:100%; min-height:300px; padding:32px 24px; text-align:center;
+    background:
+      radial-gradient(420px 220px at 50% 35%, rgba(56,211,197,0.18), transparent 65%),
+      #04131d;
+  }
+  .mokhamen-mono .glyph{
+    font-family:var(--sans-en); font-weight:800; font-size:3.4rem;
+    color:#38d3c5; letter-spacing:-0.04em; line-height:1;
+    text-shadow:0 0 24px rgba(56,211,197,0.45);
+    margin-bottom:14px;
+  }
+  .mokhamen-mono .sub{
+    font-family:var(--sans-en); font-size:0.78rem;
+    color:#7faab0; letter-spacing:0.18em; text-transform:uppercase;
+  }
+  .mokhamen-mono .divider{
+    width:36px; height:2px; background:linear-gradient(90deg, transparent, #38d3c5, transparent);
+    margin:18px 0;
+  }
+  .mokhamen-mono .hint{
+    font-size:0.82rem; color:#9fc4cb; max-width:32ch; line-height:1.55;
+  }
 
   /* ---------- live preview card ---------- */
   .preview-card{
@@ -549,8 +663,8 @@
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow">
-          <span class="lang-ar">الخدمات الثماني</span>
-          <span class="lang-en">The eight services</span>
+          <span class="lang-ar">الخدمات الاثنتا عشرة</span>
+          <span class="lang-en">The twelve services</span>
         </div>
         <h2 class="display">
           <span class="lang-ar">منصة لكل خطوة في رحلتك القانونية</span>
@@ -975,6 +1089,246 @@
         </div>
       </div>
 
+      <!-- Mokhamen — Main -->
+      <div class="service-row">
+        <article class="card mokhamen">
+          <div class="card-top">
+            <div class="card-seal" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7l8-4 8 4-8 4-8-4Z"/><path d="M4 12l8 4 8-4"/><path d="M4 17l8 4 8-4"/></svg>
+            </div>
+            <div class="card-index">09</div>
+          </div>
+          <h3 class="display">Mokhamen</h3>
+          <div class="tagline">
+            <span class="lang-ar">المنصة الرئيسية — كل خدماتك في مكان واحد</span>
+            <span class="lang-en">The main hub — all your services in one place</span>
+          </div>
+          <p class="desc">
+            <span class="lang-ar">البوابة الرسمية لمجموعة مخمن: نقطة دخول موحّدة للأدوات والمنتجات والخدمات الرقمية. تقدّم تجربة سلسة، تصميمًا حديثًا، وروابط سريعة لكل منصة فرعية في الشبكة.</span>
+            <span class="lang-en">The official gateway of the Mokhamen group: a single entry point to a curated set of digital tools and services. A modern, fast hub that routes you to the right sub-product in seconds.</span>
+          </p>
+          <ul class="feature-list">
+            <li><span class="lang-ar">تصميم نظيف وأداء سريع</span><span class="lang-en">Clean design, fast performance</span></li>
+            <li><span class="lang-ar">تنقّل موحّد بين المنتجات الفرعية</span><span class="lang-en">Unified navigation across sub-products</span></li>
+            <li><span class="lang-ar">دعم عربي وإنجليزي كامل</span><span class="lang-en">Full Arabic & English support</span></li>
+            <li><span class="lang-ar">مدخل رسمي لكل خدمات مخمن</span><span class="lang-en">Official entry to the Mokhamen network</span></li>
+          </ul>
+          <a class="card-cta" href="https://mokhamen.com" target="_blank" rel="noopener">
+            <span class="lang-ar">ادخل إلى Mokhamen</span><span class="lang-en">Enter Mokhamen</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <div class="card-url">mokhamen.com</div>
+        </article>
+
+        <div class="preview-card mokhamen">
+          <div class="preview-chrome">
+            <div class="preview-dots"><span></span><span></span><span></span></div>
+            <div class="preview-addr">mokhamen.com</div>
+          </div>
+          <a class="preview-frame-wrap" href="https://mokhamen.com" target="_blank" rel="noopener" aria-label="Open Mokhamen">
+            <div class="mokhamen-mono">
+              <div class="glyph">M</div>
+              <div class="divider"></div>
+              <div class="sub">mokhamen.com</div>
+              <div class="divider"></div>
+              <div class="hint">
+                <span class="lang-ar">المعاينة المباشرة غير مفعّلة — اضغط لفتح الموقع</span>
+                <span class="lang-en">Live preview disabled — click to open the site</span>
+              </div>
+            </div>
+            <div class="preview-open"><span>
+              <span class="lang-ar">فتح الموقع</span><span class="lang-en">Open site</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span></div>
+          </a>
+          <div class="preview-caption">
+            <span class="dot shot"></span>
+            <span class="lang-ar">البوابة الرئيسية لمجموعة مخمن</span>
+            <span class="lang-en">The Mokhamen group main hub</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mokhamen — How (guides & how-tos) -->
+      <div class="service-row">
+        <article class="card mokhamen">
+          <div class="card-top">
+            <div class="card-seal" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 .9-1 1.7"/><path d="M12 17h.01"/></svg>
+            </div>
+            <div class="card-index">10</div>
+          </div>
+          <h3 class="display" dir-flip>how.mokhamen</h3>
+          <div class="tagline">
+            <span class="lang-ar">أدلة وإرشادات خطوة بخطوة</span>
+            <span class="lang-en">Step-by-step guides & how-tos</span>
+          </div>
+          <p class="desc">
+            <span class="lang-ar">مكتبة شاملة من الأدلة العملية والإرشادات المختصرة التي تأخذ المستخدم من السؤال إلى الحل. محتوى مُنظَّم بالذكاء الاصطناعي، قابل للبحث، ومحدّث باستمرار.</span>
+            <span class="lang-en">A focused library of practical guides and short walkthroughs that take users from question to solution. AI-structured, searchable, and continuously updated content.</span>
+          </p>
+          <ul class="feature-list">
+            <li><span class="lang-ar">أدلة قصيرة وعملية لكل منتج</span><span class="lang-en">Short, practical guides per product</span></li>
+            <li><span class="lang-ar">بحث ذكي وفهرسة واضحة</span><span class="lang-en">Smart search & clear indexing</span></li>
+            <li><span class="lang-ar">محتوى ثنائي اللغة</span><span class="lang-en">Bilingual content (AR/EN)</span></li>
+            <li><span class="lang-ar">تحديثات مستمرة</span><span class="lang-en">Continuously updated</span></li>
+          </ul>
+          <a class="card-cta" href="https://how.mokhamen.com" target="_blank" rel="noopener">
+            <span class="lang-ar">تصفّح الأدلة</span><span class="lang-en">Browse guides</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <div class="card-url">how.mokhamen.com</div>
+        </article>
+
+        <div class="preview-card mokhamen">
+          <div class="preview-chrome">
+            <div class="preview-dots"><span></span><span></span><span></span></div>
+            <div class="preview-addr">how.mokhamen.com</div>
+          </div>
+          <a class="preview-frame-wrap" href="https://how.mokhamen.com" target="_blank" rel="noopener" aria-label="Open how.mokhamen">
+            <div class="mokhamen-mono">
+              <div class="glyph">?</div>
+              <div class="divider"></div>
+              <div class="sub">how.mokhamen.com</div>
+              <div class="divider"></div>
+              <div class="hint">
+                <span class="lang-ar">المعاينة المباشرة غير مفعّلة — اضغط لفتح الموقع</span>
+                <span class="lang-en">Live preview disabled — click to open the site</span>
+              </div>
+            </div>
+            <div class="preview-open"><span>
+              <span class="lang-ar">فتح الموقع</span><span class="lang-en">Open site</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span></div>
+          </a>
+          <div class="preview-caption">
+            <span class="dot shot"></span>
+            <span class="lang-ar">أدلة وإرشادات مخمن</span>
+            <span class="lang-en">Mokhamen how-to hub</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mokhamen — G (Google-integrated services) -->
+      <div class="service-row">
+        <article class="card mokhamen">
+          <div class="card-top">
+            <div class="card-seal" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/></svg>
+            </div>
+            <div class="card-index">11</div>
+          </div>
+          <h3 class="display" dir-flip>g.mokhamen</h3>
+          <div class="tagline">
+            <span class="lang-ar">خدمات مدمجة مع Google</span>
+            <span class="lang-en">Google-integrated services</span>
+          </div>
+          <p class="desc">
+            <span class="lang-ar">نقطة الدخول إلى خدمات مخمن التي تتكامل مع منظومة Google: بحث متقدّم، فهرسة محسّنة، ولوحات تحكّم مرتبطة بـ Search Console وAnalytics — لإدارة ذكية وقرارات مبنية على البيانات.</span>
+            <span class="lang-en">The gateway to Mokhamen services that integrate with the Google ecosystem: advanced search, enhanced indexing, and dashboards wired to Search Console &amp; Analytics — for smarter, data-driven decisions.</span>
+          </p>
+          <ul class="feature-list">
+            <li><span class="lang-ar">بحث وفهرسة مدعومان من Google</span><span class="lang-en">Google-powered search &amp; indexing</span></li>
+            <li><span class="lang-ar">تكامل مع Search Console</span><span class="lang-en">Search Console integration</span></li>
+            <li><span class="lang-ar">لوحات تحكّم تحليلية</span><span class="lang-en">Analytical dashboards</span></li>
+            <li><span class="lang-ar">جاهز للنشر على Vercel</span><span class="lang-en">Vercel-ready deployment</span></li>
+          </ul>
+          <a class="card-cta" href="https://g.mokhamen.com" target="_blank" rel="noopener">
+            <span class="lang-ar">افتح g.mokhamen</span><span class="lang-en">Open g.mokhamen</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <div class="card-url">g.mokhamen.com</div>
+        </article>
+
+        <div class="preview-card mokhamen">
+          <div class="preview-chrome">
+            <div class="preview-dots"><span></span><span></span><span></span></div>
+            <div class="preview-addr">g.mokhamen.com</div>
+          </div>
+          <a class="preview-frame-wrap" href="https://g.mokhamen.com" target="_blank" rel="noopener" aria-label="Open g.mokhamen">
+            <div class="mokhamen-mono">
+              <div class="glyph">G</div>
+              <div class="divider"></div>
+              <div class="sub">g.mokhamen.com</div>
+              <div class="divider"></div>
+              <div class="hint">
+                <span class="lang-ar">المعاينة المباشرة غير مفعّلة — اضغط لفتح الموقع</span>
+                <span class="lang-en">Live preview disabled — click to open the site</span>
+              </div>
+            </div>
+            <div class="preview-open"><span>
+              <span class="lang-ar">فتح الموقع</span><span class="lang-en">Open site</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span></div>
+          </a>
+          <div class="preview-caption">
+            <span class="dot shot"></span>
+            <span class="lang-ar">خدمات مخمن المدمجة مع Google</span>
+            <span class="lang-en">Mokhamen × Google services</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mokhamen — Rent (rent automation) -->
+      <div class="service-row">
+        <article class="card mokhamen">
+          <div class="card-top">
+            <div class="card-seal" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11l9-7 9 7"/><path d="M5 10v9h14v-9"/><path d="M10 19v-5h4v5"/></svg>
+            </div>
+            <div class="card-index">12</div>
+          </div>
+          <h3 class="display" dir-flip>rent.mokhamen</h3>
+          <div class="tagline">
+            <span class="lang-ar">أتمتة الإيجار والعقارات</span>
+            <span class="lang-en">Rent &amp; property automation</span>
+          </div>
+          <p class="desc">
+            <span class="lang-ar">منصة متخصّصة في إدارة العقارات وأتمتة الإيجار: متابعة العقود، تذكير الدفع، تقارير مالية، ولوحة تحكّم بسيطة للمالك والمستأجر على حدّ سواء.</span>
+            <span class="lang-en">A focused platform for property management and rent automation: contract tracking, payment reminders, financial reports, and a clean dashboard for both landlords and tenants.</span>
+          </p>
+          <ul class="feature-list">
+            <li><span class="lang-ar">تتبّع العقود والمدفوعات</span><span class="lang-en">Contract &amp; payment tracking</span></li>
+            <li><span class="lang-ar">تذكير دفع تلقائي</span><span class="lang-en">Automated payment reminders</span></li>
+            <li><span class="lang-ar">تقارير مالية واضحة</span><span class="lang-en">Clear financial reports</span></li>
+            <li><span class="lang-ar">لوحة للمالك والمستأجر</span><span class="lang-en">Landlord &amp; tenant dashboards</span></li>
+          </ul>
+          <a class="card-cta" href="https://rent.mokhamen.com" target="_blank" rel="noopener">
+            <span class="lang-ar">افتح rent.mokhamen</span><span class="lang-en">Open rent.mokhamen</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <div class="card-url">rent.mokhamen.com</div>
+        </article>
+
+        <div class="preview-card mokhamen">
+          <div class="preview-chrome">
+            <div class="preview-dots"><span></span><span></span><span></span></div>
+            <div class="preview-addr">rent.mokhamen.com</div>
+          </div>
+          <a class="preview-frame-wrap" href="https://rent.mokhamen.com" target="_blank" rel="noopener" aria-label="Open rent.mokhamen">
+            <div class="mokhamen-mono">
+              <div class="glyph">R</div>
+              <div class="divider"></div>
+              <div class="sub">rent.mokhamen.com</div>
+              <div class="divider"></div>
+              <div class="hint">
+                <span class="lang-ar">المعاينة المباشرة غير مفعّلة — اضغط لفتح الموقع</span>
+                <span class="lang-en">Live preview disabled — click to open the site</span>
+              </div>
+            </div>
+            <div class="preview-open"><span>
+              <span class="lang-ar">فتح الموقع</span><span class="lang-en">Open site</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span></div>
+          </a>
+          <div class="preview-caption">
+            <span class="dot shot"></span>
+            <span class="lang-ar">أتمتة الإيجار من مخمن</span>
+            <span class="lang-en">Mokhamen rent automation</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 </main>
@@ -995,6 +1349,10 @@
         <a href="https://wakeelypro.com" target="_blank" rel="noopener" dir-flip>WakeelyPro</a>
         <a href="https://haqqi.onrender.com" target="_blank" rel="noopener"><span class="lang-ar">حقّي (Render)</span><span class="lang-en">Haqqi (Render)</span></a>
         <a href="https://google-haqqi.vercel.app" target="_blank" rel="noopener">Google Haqqi</a>
+        <a href="https://mokhamen.com" target="_blank" rel="noopener" dir-flip>Mokhamen</a>
+        <a href="https://how.mokhamen.com" target="_blank" rel="noopener" dir-flip>how.mokhamen</a>
+        <a href="https://g.mokhamen.com" target="_blank" rel="noopener" dir-flip>g.mokhamen</a>
+        <a href="https://rent.mokhamen.com" target="_blank" rel="noopener" dir-flip>rent.mokhamen</a>
       </nav>
     </div>
     <div class="footer-bottom">
@@ -1003,8 +1361,8 @@
         <span class="lang-en">© 2026 LegalWakeely. All rights reserved.</span>
       </span>
       <span>
-        <span class="lang-ar">صُنعت هذه الصفحة كدليل موحد لخدماتنا الثماني.</span>
-        <span class="lang-en">This page is an independent index of our eight services.</span>
+        <span class="lang-ar">صُنعت هذه الصفحة كدليل موحد لخدماتنا الاثنتي عشرة.</span>
+        <span class="lang-en">This page is an independent index of our twelve services.</span>
       </span>
     </div>
   </div>
