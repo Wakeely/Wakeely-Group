@@ -339,32 +339,6 @@
   .preview-card.mokhamen .preview-caption{color:#7faab0;}
   .preview-card.mokhamen .preview-caption .dot.shot{background:#38d3c5;}
 
-  /* Mokhamen monogram block (replaces logo screenshot) */
-  .mokhamen-mono{
-    display:flex; flex-direction:column; align-items:center; justify-content:center;
-    height:100%; min-height:300px; padding:32px 24px; text-align:center;
-    background:
-      radial-gradient(420px 220px at 50% 35%, rgba(56,211,197,0.18), transparent 65%),
-      #04131d;
-  }
-  .mokhamen-mono .glyph{
-    font-family:var(--sans-en); font-weight:800; font-size:3.4rem;
-    color:#38d3c5; letter-spacing:-0.04em; line-height:1;
-    text-shadow:0 0 24px rgba(56,211,197,0.45);
-    margin-bottom:14px;
-  }
-  .mokhamen-mono .sub{
-    font-family:var(--sans-en); font-size:0.78rem;
-    color:#7faab0; letter-spacing:0.18em; text-transform:uppercase;
-  }
-  .mokhamen-mono .divider{
-    width:36px; height:2px; background:linear-gradient(90deg, transparent, #38d3c5, transparent);
-    margin:18px 0;
-  }
-  .mokhamen-mono .hint{
-    font-size:0.82rem; color:#9fc4cb; max-width:32ch; line-height:1.55;
-  }
-
   /* ---------- live preview card ---------- */
   .preview-card{
     background:var(--ink-3);
@@ -532,6 +506,13 @@
   .preview-open-cta:hover{background:var(--gold-soft); transform:translateY(-1px);}
   .preview-open-cta svg{width:14px; height:14px;}
   html[dir="rtl"] .preview-open-cta svg{transform:scaleX(-1);}
+
+  /* Mokhamen live-preview open button: cyan instead of gold */
+  .preview-card.mokhamen .preview-open-cta{
+    background:#38d3c5; color:#062029;
+    box-shadow:0 6px 18px -4px rgba(56,211,197,0.55);
+  }
+  .preview-card.mokhamen .preview-open-cta:hover{background:#6e8cff; color:#06112b;}
 
   @media (max-width:900px){
     .service-row{grid-template-columns:1fr;}
@@ -1125,26 +1106,17 @@
             <div class="preview-dots"><span></span><span></span><span></span></div>
             <div class="preview-addr">mokhamen.com</div>
           </div>
-          <a class="preview-frame-wrap" href="https://mokhamen.com" target="_blank" rel="noopener" aria-label="Open Mokhamen">
-            <div class="mokhamen-mono">
-              <div class="glyph">M</div>
-              <div class="divider"></div>
-              <div class="sub">mokhamen.com</div>
-              <div class="divider"></div>
-              <div class="hint">
-                <span class="lang-ar">المعاينة المباشرة غير مفعّلة — اضغط لفتح الموقع</span>
-                <span class="lang-en">Live preview disabled — click to open the site</span>
-              </div>
-            </div>
-            <div class="preview-open"><span>
+          <div class="preview-frame-wrap preview-frame-wrap--live">
+            <iframe src="https://mokhamen.com" loading="lazy" title="Mokhamen preview" referrerpolicy="no-referrer" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+            <a class="preview-open-cta" href="https://mokhamen.com" target="_blank" rel="noopener">
               <span class="lang-ar">فتح الموقع</span><span class="lang-en">Open site</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </span></div>
-          </a>
+            </a>
+          </div>
           <div class="preview-caption">
-            <span class="dot shot"></span>
-            <span class="lang-ar">البوابة الرئيسية لمجموعة مخمن</span>
-            <span class="lang-en">The Mokhamen group main hub</span>
+            <span class="dot live"></span>
+            <span class="lang-ar">معاينة مباشرة لموقع Mokhamen</span>
+            <span class="lang-en">Live preview of Mokhamen</span>
           </div>
         </div>
       </div>
@@ -1185,26 +1157,17 @@
             <div class="preview-dots"><span></span><span></span><span></span></div>
             <div class="preview-addr">how.mokhamen.com</div>
           </div>
-          <a class="preview-frame-wrap" href="https://how.mokhamen.com" target="_blank" rel="noopener" aria-label="Open how.mokhamen">
-            <div class="mokhamen-mono">
-              <div class="glyph">?</div>
-              <div class="divider"></div>
-              <div class="sub">how.mokhamen.com</div>
-              <div class="divider"></div>
-              <div class="hint">
-                <span class="lang-ar">المعاينة المباشرة غير مفعّلة — اضغط لفتح الموقع</span>
-                <span class="lang-en">Live preview disabled — click to open the site</span>
-              </div>
-            </div>
-            <div class="preview-open"><span>
+          <div class="preview-frame-wrap preview-frame-wrap--live">
+            <iframe src="https://how.mokhamen.com" loading="lazy" title="how.mokhamen preview" referrerpolicy="no-referrer" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+            <a class="preview-open-cta" href="https://how.mokhamen.com" target="_blank" rel="noopener">
               <span class="lang-ar">فتح الموقع</span><span class="lang-en">Open site</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </span></div>
-          </a>
+            </a>
+          </div>
           <div class="preview-caption">
-            <span class="dot shot"></span>
-            <span class="lang-ar">أدلة وإرشادات مخمن</span>
-            <span class="lang-en">Mokhamen how-to hub</span>
+            <span class="dot live"></span>
+            <span class="lang-ar">معاينة مباشرة لـ how.mokhamen</span>
+            <span class="lang-en">Live preview of how.mokhamen</span>
           </div>
         </div>
       </div>
@@ -1245,26 +1208,17 @@
             <div class="preview-dots"><span></span><span></span><span></span></div>
             <div class="preview-addr">g.mokhamen.com</div>
           </div>
-          <a class="preview-frame-wrap" href="https://g.mokhamen.com" target="_blank" rel="noopener" aria-label="Open g.mokhamen">
-            <div class="mokhamen-mono">
-              <div class="glyph">G</div>
-              <div class="divider"></div>
-              <div class="sub">g.mokhamen.com</div>
-              <div class="divider"></div>
-              <div class="hint">
-                <span class="lang-ar">المعاينة المباشرة غير مفعّلة — اضغط لفتح الموقع</span>
-                <span class="lang-en">Live preview disabled — click to open the site</span>
-              </div>
-            </div>
-            <div class="preview-open"><span>
+          <div class="preview-frame-wrap preview-frame-wrap--live">
+            <iframe src="https://g.mokhamen.com" loading="lazy" title="g.mokhamen preview" referrerpolicy="no-referrer" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+            <a class="preview-open-cta" href="https://g.mokhamen.com" target="_blank" rel="noopener">
               <span class="lang-ar">فتح الموقع</span><span class="lang-en">Open site</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </span></div>
-          </a>
+            </a>
+          </div>
           <div class="preview-caption">
-            <span class="dot shot"></span>
-            <span class="lang-ar">خدمات مخمن المدمجة مع Google</span>
-            <span class="lang-en">Mokhamen × Google services</span>
+            <span class="dot live"></span>
+            <span class="lang-ar">معاينة مباشرة لـ g.mokhamen</span>
+            <span class="lang-en">Live preview of g.mokhamen</span>
           </div>
         </div>
       </div>
@@ -1305,26 +1259,17 @@
             <div class="preview-dots"><span></span><span></span><span></span></div>
             <div class="preview-addr">rent.mokhamen.com</div>
           </div>
-          <a class="preview-frame-wrap" href="https://rent.mokhamen.com" target="_blank" rel="noopener" aria-label="Open rent.mokhamen">
-            <div class="mokhamen-mono">
-              <div class="glyph">R</div>
-              <div class="divider"></div>
-              <div class="sub">rent.mokhamen.com</div>
-              <div class="divider"></div>
-              <div class="hint">
-                <span class="lang-ar">المعاينة المباشرة غير مفعّلة — اضغط لفتح الموقع</span>
-                <span class="lang-en">Live preview disabled — click to open the site</span>
-              </div>
-            </div>
-            <div class="preview-open"><span>
+          <div class="preview-frame-wrap preview-frame-wrap--live">
+            <iframe src="https://rent.mokhamen.com" loading="lazy" title="rent.mokhamen preview" referrerpolicy="no-referrer" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+            <a class="preview-open-cta" href="https://rent.mokhamen.com" target="_blank" rel="noopener">
               <span class="lang-ar">فتح الموقع</span><span class="lang-en">Open site</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </span></div>
-          </a>
+            </a>
+          </div>
           <div class="preview-caption">
-            <span class="dot shot"></span>
-            <span class="lang-ar">أتمتة الإيجار من مخمن</span>
-            <span class="lang-en">Mokhamen rent automation</span>
+            <span class="dot live"></span>
+            <span class="lang-ar">معاينة مباشرة لـ rent.mokhamen</span>
+            <span class="lang-en">Live preview of rent.mokhamen</span>
           </div>
         </div>
       </div>
