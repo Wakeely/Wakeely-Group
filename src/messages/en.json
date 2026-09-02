@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "title": "Wakeely Group | Digital Legal Ecosystem",
+    "description": "A digital ecosystem connecting legal knowledge, procedures, matter management, and tools for lawyers in Jordan. Tell us what you need and we'll route you to the right platform.",
+    "ogTitle": "Wakeely Group",
+    "ogDescription": "From your first question… to your final step."
+  },
+  "header": {
+    "nav": {
+      "about": "About",
+      "knowledge": "Knowledge",
+      "legalServices": "Legal Services",
+      "forLawyers": "For Lawyers",
+      "contact": "Contact"
+    },
+    "language": "العربية"
+  },
+  "hero": {
+    "eyebrow": "Wakeely Group",
+    "title": "Welcome to Wakeely",
+    "subtitle": "From your first question… to your final step.",
+    "description": "A digital ecosystem that connects legal knowledge, procedures, matter management, and tools for lawyers in Jordan."
+  },
+  "doors": {
+    "heading": "How can we help you?",
+    "individual": {
+      "title": "I'm an individual or business",
+      "subtitle": "I have a legal question or matter",
+      "description": "Understand your rights, explore procedures and services, or start organizing your legal matter.",
+      "cta": "Start here",
+      "ariaLabel": "Go to general legal services"
+    },
+    "learn": {
+      "title": "I want to learn or research",
+      "subtitle": "Legal knowledge and lawyers",
+      "description": "Plain-language legal information, FAQs, resources, and lawyer discovery.",
+      "cta": "Explore ProWakeely",
+      "ariaLabel": "Go to ProWakeely knowledge platform"
+    },
+    "lawyer": {
+      "title": "I'm a lawyer",
+      "subtitle": "I want to manage my legal practice",
+      "description": "Digital tools to manage your office, clients, files, cases, and procedures.",
+      "cta": "Discover AlmizanPro",
+      "ariaLabel": "Go to AlmizanPro for lawyers"
+    },
+    "dontKnow": {
+      "title": "I don't know where to start",
+      "subtitle": "Tell us what you need",
+      "description": "Describe your problem in your own words and we'll route you to the right platform or section.",
+      "cta": "Describe my problem",
+      "ariaLabel": "Open the free-text routing box"
+    }
+  },
+  "specialized": {
+    "heading": "Facing one of these problems?",
+    "accident": {
+      "title": "Car accident or insurance dispute?",
+      "description": "Tools and information to help you understand claims procedures and handle the aftermath of accidents and insurance issues.",
+      "cta": "Start here ← Accident Wakeely"
+    },
+    "tenant": {
+      "title": "Issue with your landlord or lease?",
+      "description": "Understand your rights and possible steps, and handle your tenancy issue in an organized way.",
+      "cta": "Start here ← Tenant Wakeely"
+    },
+    "labor": {
+      "title": "A problem at work?",
+      "description": "Learn about your employment rights and the steps you can take before giving up your claim.",
+      "cta": "Start here ← Labor Wakeely"
+    },
+    "supportingLine": "These platforms are designed specifically to ease access to legal information and tools for people who may not be able to afford a lawyer from the start."
+  },
+  "ecosystem": {
+    "heading": "The Wakeely Ecosystem",
+    "text": "You don't need to know which platform you need. We designed Wakeely as one connected ecosystem — you start from your need, and we route you to the right tool or service.",
+    "steps": {
+      "know": "Know",
+      "solve": "Solve",
+      "manage": "Manage",
+      "practice": "Practice"
+    }
+  },
+  "disclaimer": {
+    "title": "Important Legal Notice",
+    "items": [
+      "The digital assistant and the content on this site do not provide legal advice or opinions and do not replace a lawyer.",
+      "No attorney-client relationship is created by using this site or any Wakeely platform.",
+      "The information is for educational and organizational purposes only.",
+      "For legal advice, contact a licensed lawyer in Jordan."
+    ]
+  },
+  "router": {
+    "heading": "Tell us what you need",
+    "placeholder": "Describe your problem in your own words…\nExample: My landlord is refusing to return my security deposit\nExample: I was in an accident and my insurer denied my claim\nExample: My employer hasn't paid my salary",
+    "submit": "Route me",
+    "submitting": "Routing…",
+    "resultTitle": "We'll route you to:",
+    "goButton": "Go to platform",
+    "chooseDifferent": "Choose a different path",
+    "startOver": "Start over",
+    "clarifyingTitle": "To be more precise, tell us:",
+    "error": "Something went wrong. Please try again.",
+    "emptyError": "Please describe your matter first.",
+    "platformNames": {
+      "prowakeely": "ProWakeely",
+      "accident_wakeely": "Accident Wakeely",
+      "tenant_wakeely": "Tenant Wakeely",
+      "labor_wakeely": "Labor Wakeely",
+      "legalwakeely": "LegalWakeely",
+      "almizanpro": "AlmizanPro"
+    }
+  },
+  "footer": {
+    "links": {
+      "about": "About",
+      "knowledge": "Knowledge",
+      "legalServices": "Legal Services",
+      "forLawyers": "For Lawyers",
+      "forBusinesses": "For Businesses",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "disclaimers": "Disclaimers",
+      "contact": "Contact"
+    },
+    "copyright": "© {year} Wakeely Group. All rights reserved."
+  },
+  "skipToContent": "Skip to main content"
+}
