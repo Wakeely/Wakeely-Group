@@ -2,6 +2,8 @@ import { HomeClient } from "@/components/home-client";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://group.legalwakeely.com";
 
+export const revalidate = 60;
+
 export default function HomePage() {
   const organizationSchema = {
     "@context": "https://schema.org",

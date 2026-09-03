@@ -1,6 +1,7 @@
 "use client";
 
 import { useLocale } from "next-intl";
+import Image from "next/image";
 
 interface SitePreviewProps {
   src: string;
@@ -12,7 +13,8 @@ interface SitePreviewProps {
 /**
  * Renders a screenshot thumbnail of a destination site in a lightweight
  * browser-chrome frame. Optional `href` wraps the whole preview in an
- * external link. Always lazy-loaded.
+ * external link. Uses next/image for automatic WebP/AVIF conversion and
+ * edge-cached optimized variants.
  */
 export function SitePreview({ src, alt, href, className }: SitePreviewProps) {
   const locale = useLocale();
@@ -20,11 +22,12 @@ export function SitePreview({ src, alt, href, className }: SitePreviewProps) {
 
   const inner = (
     <div className="relative h-full w-full overflow-hidden">
-      <img
+      <Image
         src={src}
         alt={alt}
-        loading="lazy"
-        className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.04]"
+        fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.04]"
       />
       <div className="pointer-events-none absolute inset-0 border border-black/10" />
     </div>
