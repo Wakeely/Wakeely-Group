@@ -1,10 +1,10 @@
 export const destinations = {
   legalwakeely: "https://legalwakeely.com",
-  prowakeely: "https://prowakeely.com",
-  almizanpro: "https://almizanpro.com",
-  accident_wakeely: "https://accident.legalwakeely.com",
-  tenant_wakeely: "https://tenant.legalwakeely.com",
-  labor_wakeely: "https://labor.legalwakeely.com",
+  prowakeely: "https://wakeelypro.com",
+  almizanpro: "https://almizan.legalwakeely.com",
+  accident_wakeely: "https://g.mokhamen.com/",
+  tenant_wakeely: "https://rent.mokhamen.com/",
+  labor_wakeely: "https://ommal.wakeelypro.com/ar",
 } as const;
 
 export type Platform = keyof typeof destinations;
