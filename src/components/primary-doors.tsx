@@ -2,8 +2,9 @@
 
 import { useLocale, useTranslations } from "next-intl";
 import { User, BookOpen, Scale, MessageCircleQuestion, ArrowRight, ArrowLeft } from "lucide-react";
-import { destinations } from "@/lib/destinations";
+import { destinations, previewImages } from "@/lib/destinations";
 import { trackEvent } from "@/lib/analytics";
+import { SitePreview } from "@/components/site-preview";
 
 interface PrimaryDoorsProps {
   onDontKnowClick: () => void;
@@ -32,6 +33,7 @@ export function PrimaryDoors({ onDontKnowClick }: PrimaryDoorsProps) {
       cta: t("individual.cta"),
       ariaLabel: t("individual.ariaLabel"),
       href: destinations.legalwakeely,
+      preview: previewImages.legalwakeely,
     },
     {
       key: "learn",
@@ -42,6 +44,7 @@ export function PrimaryDoors({ onDontKnowClick }: PrimaryDoorsProps) {
       cta: t("learn.cta"),
       ariaLabel: t("learn.ariaLabel"),
       href: destinations.prowakeely,
+      preview: previewImages.prowakeely,
     },
     {
       key: "lawyer",
@@ -52,6 +55,7 @@ export function PrimaryDoors({ onDontKnowClick }: PrimaryDoorsProps) {
       cta: t("lawyer.cta"),
       ariaLabel: t("lawyer.ariaLabel"),
       href: destinations.almizanpro,
+      preview: previewImages.almizanpro,
     },
     {
       key: "dontKnow",
@@ -91,21 +95,26 @@ export function PrimaryDoors({ onDontKnowClick }: PrimaryDoorsProps) {
             onClick: () => handleDoorClick(door.key, door.href),
             "aria-label": door.ariaLabel,
             className:
-              "group flex flex-col gap-3 rounded-2xl border border-border bg-surface p-6 transition-all hover:border-brand-teal hover:shadow-lg hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2",
+              "group flex flex-col gap-4 rounded-2xl border border-border bg-surface p-4 transition-all hover:border-brand-teal hover:shadow-lg hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2",
           };
 
           const body = (
             <>
-              <div className="mb-2 grid h-12 w-12 place-items-center rounded-xl bg-brand-navy text-white">
-                <Icon className="h-6 w-6" aria-hidden="true" />
+              {door.preview && (
+                <SitePreview src={door.preview} alt={door.title} href={door.href} />
+              )}
+              <div className="flex flex-1 flex-col px-1 pb-1">
+                <div className="mb-2 grid h-12 w-12 place-items-center rounded-xl bg-brand-navy text-white">
+                  <Icon className="h-6 w-6" aria-hidden="true" />
+                </div>
+                <h3 className="text-xl font-semibold text-text-primary">{door.title}</h3>
+                <p className="text-sm font-medium text-brand-teal">{door.subtitle}</p>
+                <p className="mt-2 text-sm leading-relaxed text-text-secondary">{door.description}</p>
+                <span className="mt-auto inline-flex items-center gap-1.5 pt-2 text-sm font-semibold text-brand-green">
+                  {door.cta}
+                  <Arrow className="h-4 w-4 transition-transform group-hover:-translate-x-0.5 rtl:group-hover:translate-x-0.5 rtl:rotate-180" aria-hidden="true" />
+                </span>
               </div>
-              <h3 className="text-xl font-semibold text-text-primary">{door.title}</h3>
-              <p className="text-sm font-medium text-brand-teal">{door.subtitle}</p>
-              <p className="text-sm leading-relaxed text-text-secondary">{door.description}</p>
-              <span className="mt-auto inline-flex items-center gap-1.5 pt-2 text-sm font-semibold text-brand-green">
-                {door.cta}
-                <Arrow className="h-4 w-4 transition-transform group-hover:-translate-x-0.5 rtl:group-hover:translate-x-0.5 rtl:rotate-180" aria-hidden="true" />
-              </span>
             </>
           );
 

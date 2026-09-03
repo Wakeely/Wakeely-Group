@@ -9,6 +9,15 @@ export const destinations = {
 
 export type Platform = keyof typeof destinations;
 
+export const previewImages: Record<Platform, string> = {
+  legalwakeely: "/previews/legalwakeely.png",
+  prowakeely: "/previews/wakeelypro.png",
+  almizanpro: "/previews/almizan.png",
+  accident_wakeely: "/previews/accident.png",
+  tenant_wakeely: "/previews/tenant.png",
+  labor_wakeely: "/previews/labor.png",
+};
+
 export const platformDisplayName: Record<Platform, string> = {
   legalwakeely: "LegalWakeely",
   prowakeely: "ProWakeely",

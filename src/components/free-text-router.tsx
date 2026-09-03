@@ -6,9 +6,10 @@ import { ArrowRight, ArrowLeft, Loader2, RefreshCcw, AlertCircle } from "lucide-
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Disclaimer } from "@/components/disclaimer";
-import { destinations, platformDisplayName } from "@/lib/destinations";
+import { destinations, platformDisplayName, previewImages } from "@/lib/destinations";
 import type { RouterInput, RouterOutput } from "@/lib/router-types";
 import { trackEvent } from "@/lib/analytics";
+import { SitePreview } from "@/components/site-preview";
 
 export function FreeTextRouter() {
   const t = useTranslations("router");
@@ -132,6 +133,15 @@ export function FreeTextRouter() {
           ) : (
             <div className="flex flex-col gap-5">
               <p className="text-sm font-medium text-text-muted">{t("resultTitle")}</p>
+
+              <SitePreview
+                src={previewImages[result.recommended_platform]}
+                alt={
+                  platformDisplayName[result.recommended_platform] ??
+                  result.recommended_platform
+                }
+                href={destinations[result.recommended_platform]}
+              />
 
               <div className="flex items-center gap-3 rounded-xl border border-brand-teal/30 bg-brand-teal/5 p-4">
                 <div className="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-brand-teal text-white">
